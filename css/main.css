@@ -1,0 +1,501 @@
+/* ==================================================
+   LA TAPADA DE LUNA
+   AGAVE Y ENCUADRE 2026
+   ================================================== */
+
+
+/* ==================================================
+   DESIGN TOKENS
+   ================================================== */
+
+:root {
+
+  /* Colors */
+
+  --color-paper: #F5F1EA;
+  --color-charcoal: #545454;
+  --color-agave: #707D6C;
+  --color-copper: #9F6C34;
+  --color-sand: #CFB99E;
+  --color-film-black: #141414;
+
+
+  /* Typography */
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Raleway", sans-serif;
+
+
+  /* Layout */
+
+  --container-width: 1440px;
+  --container-padding: 48px;
+
+
+  /* Spacing */
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 96px;
+  --space-3xl: 144px;
+
+
+  /* Transitions */
+
+  --transition-fast: 250ms ease;
+  --transition-base: 400ms ease;
+  --transition-slow: 800ms ease;
+
+}
+
+
+/* ==================================================
+   RESET
+   ================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+
+  font-family: var(--font-body);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+
+button,
+a {
+  font: inherit;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   BASE
+   ================================================== */
+
+.container {
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+
+.section {
+  position: relative;
+  width: 100%;
+}
+
+
+.eyebrow {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--color-copper);
+}
+
+
+/* ==================================================
+   BUTTONS
+   ================================================== */
+
+.button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 24px;
+
+  border: 1px solid transparent;
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+
+.button--copper {
+  background-color: var(--color-copper);
+  color: var(--color-paper);
+}
+
+
+.button--copper:hover {
+  background-color: var(--color-film-black);
+}
+
+
+.button--outline {
+  border-color: var(--color-charcoal);
+  background-color: transparent;
+  color: var(--color-charcoal);
+}
+
+
+.button--outline:hover {
+  background-color: var(--color-charcoal);
+  color: var(--color-paper);
+}
+
+
+/* ==================================================
+   HEADER
+   ================================================== */
+
+.site-header {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 100;
+}
+
+
+.site-header__inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 88px;
+}
+
+
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--font-display);
+
+  font-size: 20px;
+  line-height: 0.8;
+
+  letter-spacing: -0.02em;
+
+  color: var(--color-charcoal);
+}
+
+
+.site-header__brand-line:last-child {
+  margin-left: 28px;
+}
+
+
+.site-header__nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+}
+
+
+.site-header__nav a {
+  position: relative;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+.site-header__nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: right;
+
+  transition: transform var(--transition-fast);
+}
+
+
+.site-header__nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+.site-header__menu {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.site-header__menu span {
+  display: block;
+
+  width: 24px;
+  height: 1px;
+
+  margin: 5px auto;
+
+  background-color: var(--color-charcoal);
+}
+
+
+/* ==================================================
+   MOBILE MENU
+   ================================================== */
+
+.mobile-menu {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 90;
+
+  display: none;
+
+  padding: 120px 24px 40px;
+
+  background-color: var(--color-paper);
+}
+
+
+.mobile-menu__inner {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  height: 100%;
+}
+
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+.mobile-menu__nav a {
+  font-family: var(--font-display);
+
+  font-size: 42px;
+  line-height: 1;
+
+  color: var(--color-charcoal);
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.site-footer {
+  padding: var(--space-3xl) 0 32px;
+
+  background-color: var(--color-film-black);
+
+  color: var(--color-paper);
+}
+
+
+.site-footer__content {
+  max-width: 760px;
+}
+
+
+.site-footer h2 {
+  margin: 24px 0;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(56px, 8vw, 120px);
+
+  font-weight: 400;
+  line-height: 0.9;
+
+  letter-spacing: -0.04em;
+}
+
+
+.site-footer__content > p:not(.eyebrow) {
+  font-size: 12px;
+  line-height: 1.7;
+
+  letter-spacing: 0.08em;
+}
+
+
+.site-footer__actions {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+
+.site-footer__bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 120px;
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(245, 241, 234, 0.2);
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+.site-footer__links {
+  display: flex;
+  gap: 20px;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  :root {
+    --container-padding: 24px;
+  }
+
+
+  .site-header__nav,
+  .site-header__cta {
+    display: none;
+  }
+
+
+  .site-header__menu {
+    display: block;
+  }
+
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 24px;
+  }
+
+
+  .site-footer__links {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .site-header__inner {
+    min-height: 76px;
+  }
+
+
+  .site-footer {
+    padding-top: 96px;
+  }
+
+
+  .site-footer h2 {
+    font-size: 64px;
+  }
+
+
+  .site-footer__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .site-footer__actions .button {
+    width: 100%;
+  }
+
+}

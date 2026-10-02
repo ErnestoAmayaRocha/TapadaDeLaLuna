@@ -1,0 +1,793 @@
+/* ==================================================
+   LA TAPADA DE LUNA
+   HERO · AGAVE Y ENCUADRE 2026
+   ================================================== */
+
+.hero {
+  position: relative;
+
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background-color: var(--color-paper);
+}
+
+
+/* ==================================================
+   HERO · TEXTURE
+   ================================================== */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      rgba(84, 84, 84, 0.08) 0.6px,
+      transparent 0.6px
+    );
+
+  background-size: 5px 5px;
+
+  opacity: 0.16;
+}
+
+
+/* ==================================================
+   HERO · LAYOUT
+   ================================================== */
+
+.hero__inner {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(420px, 1.1fr);
+
+  align-items: center;
+
+  gap: clamp(48px, 7vw, 120px);
+
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+
+/* ==================================================
+   HERO · CONTENT
+   ================================================== */
+
+.hero__content {
+  position: relative;
+
+  max-width: 650px;
+
+  padding-top: 40px;
+}
+
+
+.hero__eyebrow {
+  margin-bottom: 22px;
+}
+
+
+.hero__title {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(
+    72px,
+    8.4vw,
+    138px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.055em;
+
+  color: var(--color-charcoal);
+}
+
+
+.hero__title-line {
+  display: block;
+}
+
+
+.hero__title-line--second {
+  margin-left: clamp(
+    28px,
+    5vw,
+    80px
+  );
+}
+
+
+.hero__edition {
+  margin-top: 34px;
+
+  font-family: var(--font-body);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.3em;
+
+  text-transform: uppercase;
+
+  color: var(--color-copper);
+}
+
+
+.hero__subtitle {
+  max-width: 500px;
+
+  margin: 26px 0 0;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(
+    30px,
+    3vw,
+    46px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.025em;
+
+  color: var(--color-charcoal);
+}
+
+
+/* ==================================================
+   HERO · EVENT DATA
+   ================================================== */
+
+.hero__meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px 24px;
+
+  margin-top: 34px;
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+}
+
+
+.hero__meta-item {
+  position: relative;
+}
+
+
+.hero__meta-item:not(:last-child)::after {
+  content: "·";
+
+  position: absolute;
+
+  right: -15px;
+
+  color: var(--color-copper);
+}
+
+
+.hero__price {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 32px;
+}
+
+
+.hero__price-label {
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  color: var(--color-copper);
+}
+
+
+.hero__price-value {
+  margin-top: 4px;
+
+  font-family: var(--font-display);
+
+  font-size: 42px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: var(--color-charcoal);
+}
+
+
+/* ==================================================
+   HERO · ACTIONS
+   ================================================== */
+
+.hero__actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 38px;
+}
+
+
+.hero__actions .button {
+  min-width: 190px;
+}
+
+
+/* ==================================================
+   HERO · VISUAL
+   ================================================== */
+
+.hero__visual {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 650px;
+}
+
+
+/* ==================================================
+   HERO · FILM FRAME
+   ================================================== */
+
+.hero__film {
+  position: relative;
+
+  width: min(
+    100%,
+    720px
+  );
+
+  aspect-ratio: 1.35 / 1;
+
+  padding: 42px 34px;
+
+  background-color: var(--color-film-black);
+
+  box-shadow:
+    0 30px 80px rgba(20, 20, 20, 0.18);
+}
+
+
+.hero__film::before,
+.hero__film::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 34px;
+
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      transparent 0,
+      transparent 28px,
+      rgba(159, 108, 52, 0.85) 28px,
+      rgba(159, 108, 52, 0.85) 42px,
+      transparent 42px,
+      transparent 70px
+    );
+}
+
+
+.hero__film::before {
+  top: 0;
+}
+
+
+.hero__film::after {
+  bottom: 0;
+}
+
+
+/* ==================================================
+   HERO · IMAGE
+   ================================================== */
+
+.hero__image {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background-color: var(--color-charcoal);
+}
+
+
+.hero__image img,
+.hero__image video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter:
+    saturate(0.88)
+    contrast(1.03);
+
+  transform: scale(1.02);
+
+  transition:
+    transform 1.5s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.hero:hover .hero__image img,
+.hero:hover .hero__image video {
+  transform: scale(1.06);
+}
+
+
+/* ==================================================
+   HERO · FILM LABEL
+   ================================================== */
+
+.hero__film-label {
+  position: absolute;
+
+  top: 50%;
+  left: -1px;
+
+  transform:
+    translateY(-50%)
+    translateX(-100%);
+
+  writing-mode: vertical-rl;
+
+  font-family: var(--font-body);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  color: var(--color-copper);
+
+  text-transform: uppercase;
+}
+
+
+/* ==================================================
+   HERO · EMBLEM
+   ================================================== */
+
+.hero__emblem {
+  position: absolute;
+
+  right: -35px;
+  bottom: -35px;
+
+  z-index: 3;
+
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: var(--color-paper);
+
+  border: 1px solid
+    rgba(84, 84, 84, 0.15);
+}
+
+
+.hero__emblem::before {
+  content: "";
+
+  width: 34px;
+  height: 34px;
+
+  background-color: var(--color-copper);
+
+  clip-path: polygon(
+    50% 0%,
+    65% 20%,
+    85% 15%,
+    80% 35%,
+    100% 50%,
+    80% 65%,
+    85% 85%,
+    65% 80%,
+    50% 100%,
+    35% 80%,
+    15% 85%,
+    20% 65%,
+    0% 50%,
+    20% 35%,
+    15% 15%,
+    35% 20%
+  );
+}
+
+
+/* ==================================================
+   HERO · SCROLL INDICATOR
+   ================================================== */
+
+.hero__scroll {
+  position: absolute;
+
+  left: 50%;
+  bottom: 30px;
+
+  z-index: 4;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  transform: translateX(-50%);
+
+  font-family: var(--font-body);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  color: var(--color-charcoal);
+}
+
+
+.hero__scroll-line {
+  width: 1px;
+  height: 42px;
+
+  background-color: var(--color-copper);
+
+  transform-origin: top;
+
+  animation: scroll-line 2s ease-in-out infinite;
+}
+
+
+@keyframes scroll-line {
+
+  0%,
+  100% {
+    transform: scaleY(0.45);
+  }
+
+  50% {
+    transform: scaleY(1);
+  }
+
+}
+
+
+/* ==================================================
+   HERO · DECORATIVE AGAVE
+   ================================================== */
+
+.hero__botanical {
+  position: absolute;
+
+  left: -100px;
+  bottom: -80px;
+
+  width: 280px;
+
+  opacity: 0.18;
+
+  pointer-events: none;
+
+  transform: rotate(-12deg);
+}
+
+
+.hero__botanical::before,
+.hero__botanical::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  width: 2px;
+
+  height: 180px;
+
+  background-color: var(--color-sand);
+
+  transform-origin: bottom;
+}
+
+
+.hero__botanical::before {
+  transform: rotate(-25deg);
+}
+
+
+.hero__botanical::after {
+  transform: rotate(25deg);
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 1100px) {
+
+  .hero__inner {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(360px, 0.9fr);
+
+    gap: 50px;
+  }
+
+
+  .hero__visual {
+    min-height: 520px;
+  }
+
+
+  .hero__film {
+    padding: 34px 28px;
+  }
+
+
+  .hero__emblem {
+    right: -20px;
+    bottom: -20px;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+  }
+
+
+  .hero__inner {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 54px;
+
+    padding-top: 130px;
+    padding-bottom: 100px;
+  }
+
+
+  .hero__content {
+    max-width: none;
+
+    padding-top: 0;
+  }
+
+
+  .hero__title {
+    font-size: clamp(
+      68px,
+      19vw,
+      112px
+    );
+  }
+
+
+  .hero__subtitle {
+    max-width: 520px;
+
+    font-size: 34px;
+  }
+
+
+  .hero__visual {
+    min-height: auto;
+
+    justify-content: flex-start;
+  }
+
+
+  .hero__film {
+    width: 100%;
+
+    aspect-ratio: 1.2 / 1;
+
+    padding: 30px 22px;
+  }
+
+
+  .hero__film-label {
+    display: none;
+  }
+
+
+  .hero__emblem {
+    right: 10px;
+    bottom: -20px;
+
+    width: 70px;
+    height: 70px;
+  }
+
+
+  .hero__emblem::before {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  .hero__botanical {
+    display: none;
+  }
+
+
+  .hero__scroll {
+    display: none;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+   ================================================== */
+
+@media (max-width: 600px) {
+
+  .hero__inner {
+    padding-top: 110px;
+    padding-bottom: 70px;
+  }
+
+
+  .hero__title {
+    font-size: 20vw;
+
+    line-height: 0.82;
+  }
+
+
+  .hero__title-line--second {
+    margin-left: 22px;
+  }
+
+
+  .hero__edition {
+    margin-top: 26px;
+
+    font-size: 10px;
+  }
+
+
+  .hero__subtitle {
+    margin-top: 20px;
+
+    font-size: 29px;
+  }
+
+
+  .hero__meta {
+    flex-direction: column;
+
+    gap: 5px;
+
+    font-size: 10px;
+  }
+
+
+  .hero__meta-item:not(:last-child)::after {
+    display: none;
+  }
+
+
+  .hero__price {
+    margin-top: 26px;
+  }
+
+
+  .hero__price-value {
+    font-size: 38px;
+  }
+
+
+  .hero__actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    margin-top: 30px;
+  }
+
+
+  .hero__actions .button {
+    width: 100%;
+  }
+
+
+  .hero__film {
+    aspect-ratio: 1 / 1;
+
+    padding: 24px 16px;
+  }
+
+}
