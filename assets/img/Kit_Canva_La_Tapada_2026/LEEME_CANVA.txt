@@ -1,0 +1,48 @@
+LA TAPADA DE LUNA / AGAVE Y ENCUADRE 2026
+IDENTIDAD GRÁFICA PARA CANVA
+
+CONTENIDO
+01_Logotipos: logotipo y emblema en cuatro colores. SVG y PNG transparentes.
+02_Recursos: película analógica, grabado botánico, seis iconos y franja de marcas de referencia.
+03_Fondos: grano fino y lienzo natural procedentes de los artes originales.
+04_Fotografia_Referencia: imágenes presentes en los materiales adjuntos.
+05_Tipografias: Cormorant Garamond y Raleway con licencias OFL.
+06_Plantillas: seis posts (1080 x 1350) y tres historias (1080 x 1920) en PPTX importable.
+07_Vistas_Previa: composiciones de referencia en PNG.
+Identidad_La_Tapada_2026.pdf: guía de aplicación de ocho páginas.
+
+PALETA HEX
+Papel de luna #F5F1EA
+Carbón #545454
+Agave #707D6C
+Cobre #9F6C34
+Arena #CFB99E
+Negro película #141414
+
+USO EN CANVA
+1. Importa los dos PPTX de la carpeta 06_Plantillas como nuevos diseños.
+2. Busca Cormorant Garamond y Raleway en el catálogo de fuentes.
+3. Verifica la fuente y el tamaño de página después de importar.
+4. Duplica la página que te sirva como base y modifica sus textos, colores o imágenes.
+5. El logotipo se conserva como recurso gráfico. Los textos de las plantillas son editables.
+6. En las tiras de película, las fotografías están debajo del marco. Cambia primero la fotografía y conserva el marco encima.
+7. Los SVG permiten escalar los recursos sin perder nitidez. Si prefieres PNG, usa los archivos transparentes incluidos.
+8. Para los fondos de grano fino, deja una opacidad visible aproximada de 5 a 10%.
+
+REFERENCIAS Y PROCEDENCIA
+Artes 21.pdf, EDICIÓN 2026.pdf y NOMBRE DE DIOS - DURANGO MX..pdf.
+La estructura de la guía toma como referencia el material de DECUM en IDENTIDAD GRAFICA tapada.pdf.
+PRESENTACION EQUIPO - LA TAPADA.pdf y el resumen ejecutivo de Martha Garza aportan el concepto y las referencias de ambiente.
+El perfil de Instagram no permitió una revisión completa durante esta entrega.
+Las fotografías del kit corresponden a los materiales adjuntos. Algunas son referencias de montaje o de ediciones anteriores.
+Los horarios y los nombres usados en las plantillas retoman los artes promocionales 2026. Los precios y el itinerario detallado no se fijan en el sistema gráfico.
+La franja de marcas es una referencia de composición. Conserva los archivos oficiales de las marcas en los materiales finales.
+No se incluyen enlaces a diseños publicados dentro de Canva.
+
+FUENTES TÉCNICAS
+Canva / Brand Kit: https://www.canva.com/help/brand-kit/
+Canva / Importación de archivos: https://www.canva.com/help/upload-formats-requirements/
+Canva / Tipografías: https://www.canva.com/ja_jp/learn/stylish-fonts/
+Google Fonts / Cormorant Garamond: https://fonts.google.com/specimen/Cormorant+Garamond
+Google Fonts / Raleway: https://fonts.google.com/specimen/Raleway
+Iconos / Lucide: https://github.com/lucide-icons/lucide

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Papel de luna",
+    "hex": "#F5F1EA",
+    "rgb": [
+      245,
+      241,
+      234
+    ],
+    "role": "Fondo principal"
+  },
+  {
+    "name": "Carbón",
+    "hex": "#545454",
+    "rgb": [
+      84,
+      84,
+      84
+    ],
+    "role": "Logotipo y lectura"
+  },
+  {
+    "name": "Agave",
+    "hex": "#707D6C",
+    "rgb": [
+      112,
+      125,
+      108
+    ],
+    "role": "Territorio y bloques secundarios"
+  },
+  {
+    "name": "Cobre",
+    "hex": "#9F6C34",
+    "rgb": [
+      159,
+      108,
+      52
+    ],
+    "role": "Fecha, énfasis y acentos"
+  },
+  {
+    "name": "Arena",
+    "hex": "#CFB99E",
+    "rgb": [
+      207,
+      185,
+      158
+    ],
+    "role": "Detalles y texturas"
+  },
+  {
+    "name": "Negro película",
+    "hex": "#141414",
+    "rgb": [
+      20,
+      20,
+      20
+    ],
+    "role": "Marcos y piezas nocturnas"
+  }
+]

@@ -1,0 +1,400 @@
+/* =========================================================
+   RITUAL
+   El corazón de La Tapada
+   ========================================================= */
+
+.ritual {
+  position: relative;
+  min-height: 90vh;
+  overflow: hidden;
+  background: var(--color-film-black);
+  color: var(--color-paper);
+}
+
+/* Imagen de fondo */
+
+.ritual__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ritual__image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.ritual__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.75) contrast(1.05);
+  transform: scale(1.03);
+  transition: transform 1.2s ease;
+}
+
+.ritual:hover .ritual__image img {
+  transform: scale(1.07);
+}
+
+/* Oscurecimiento cinematográfico */
+
+.ritual__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 20, 20, 0.92) 0%,
+      rgba(20, 20, 20, 0.72) 35%,
+      rgba(20, 20, 20, 0.35) 70%,
+      rgba(20, 20, 20, 0.58) 100%
+    );
+}
+
+/* Grano */
+
+.ritual__grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image:
+    radial-gradient(
+      rgba(245, 241, 234, 0.8) 0.5px,
+      transparent 0.5px
+    );
+  background-size: 5px 5px;
+  mix-blend-mode: soft-light;
+}
+
+/* Contenido */
+
+.ritual__inner {
+  position: relative;
+  z-index: 2;
+
+  min-height: 90vh;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 120px var(--container-padding);
+
+  display: flex;
+  align-items: center;
+}
+
+.ritual__content {
+  width: min(680px, 100%);
+}
+
+/* Número */
+
+.ritual__number {
+  position: absolute;
+  top: 120px;
+  right: var(--container-padding);
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--color-sand);
+  opacity: 0.8;
+}
+
+.ritual__number::before {
+  content: "";
+  display: inline-block;
+  width: 42px;
+  height: 1px;
+  margin-right: 14px;
+  vertical-align: middle;
+  background: var(--color-sand);
+  opacity: 0.6;
+}
+
+/* Eyebrow */
+
+.ritual__eyebrow {
+  margin-bottom: 24px;
+  color: var(--color-sand);
+}
+
+/* Título */
+
+.ritual__title {
+  margin: 0 0 32px;
+
+  font-family: var(--font-display);
+  font-size: clamp(64px, 7vw, 112px);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+  color: var(--color-paper);
+}
+
+.ritual__title em {
+  display: block;
+  color: var(--color-sand);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Texto */
+
+.ritual__description {
+  max-width: 540px;
+  margin: 0 0 40px;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.85;
+  color: rgba(245, 241, 234, 0.82);
+}
+
+/* Meta */
+
+.ritual__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-bottom: 40px;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-paper);
+}
+
+.ritual__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ritual__meta span:not(:last-child)::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-copper);
+}
+
+/* Botón */
+
+.ritual__action {
+  display: inline-flex;
+}
+
+/* Marca cinematográfica */
+
+.ritual__film-mark {
+  position: absolute;
+  right: var(--container-padding);
+  bottom: 56px;
+
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 234, 0.65);
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* Línea inferior */
+
+.ritual__bottom-line {
+  position: absolute;
+  left: var(--container-padding);
+  right: var(--container-padding);
+  bottom: 40px;
+
+  height: 1px;
+  background: rgba(245, 241, 234, 0.18);
+}
+
+/* Decoración tipo fotograma */
+
+.ritual__frame {
+  position: absolute;
+  right: 9%;
+  top: 50%;
+  width: 260px;
+  height: 360px;
+
+  border: 1px solid rgba(245, 241, 234, 0.2);
+
+  transform:
+    translateY(-50%)
+    rotate(5deg);
+
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.ritual__frame::before,
+.ritual__frame::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+
+  height: 8px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 12px,
+      rgba(245, 241, 234, 0.25) 12px 18px
+    );
+}
+
+.ritual__frame::before {
+  top: 18px;
+}
+
+.ritual__frame::after {
+  bottom: 18px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .ritual {
+    min-height: 780px;
+  }
+
+  .ritual__inner {
+    min-height: 780px;
+    padding: 100px var(--container-padding);
+  }
+
+  .ritual__number {
+    top: 70px;
+    right: var(--container-padding);
+  }
+
+  .ritual__title {
+    font-size: clamp(58px, 10vw, 88px);
+  }
+
+  .ritual__frame {
+    right: 4%;
+    width: 190px;
+    height: 280px;
+    opacity: 0.3;
+  }
+
+  .ritual__film-mark {
+    right: var(--container-padding);
+    bottom: 70px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .ritual {
+    min-height: 760px;
+  }
+
+  .ritual__inner {
+    min-height: 760px;
+    padding: 96px 24px 100px;
+    align-items: flex-end;
+  }
+
+  .ritual__overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 20, 20, 0.38) 0%,
+        rgba(20, 20, 20, 0.48) 30%,
+        rgba(20, 20, 20, 0.9) 70%,
+        rgba(20, 20, 20, 0.96) 100%
+      );
+  }
+
+  .ritual__number {
+    top: 32px;
+    right: 24px;
+  }
+
+  .ritual__number::before {
+    width: 28px;
+    margin-right: 10px;
+  }
+
+  .ritual__content {
+    width: 100%;
+  }
+
+  .ritual__eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .ritual__title {
+    margin-bottom: 26px;
+    font-size: clamp(52px, 17vw, 76px);
+    line-height: 0.9;
+  }
+
+  .ritual__description {
+    margin-bottom: 28px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .ritual__meta {
+    gap: 10px 18px;
+    margin-bottom: 30px;
+    font-size: 9px;
+  }
+
+  .ritual__meta span:not(:last-child)::after {
+    width: 3px;
+    height: 3px;
+  }
+
+  .ritual__frame {
+    top: 20%;
+    right: -40px;
+    width: 150px;
+    height: 210px;
+    opacity: 0.22;
+  }
+
+  .ritual__film-mark {
+    display: none;
+  }
+
+  .ritual__bottom-line {
+    left: 24px;
+    right: 24px;
+    bottom: 32px;
+  }
+}
+
+/* Reduce motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .ritual__image img {
+    transition: none;
+    transform: none;
+  }
+
+  .ritual:hover .ritual__image img {
+    transform: none;
+  }
+}

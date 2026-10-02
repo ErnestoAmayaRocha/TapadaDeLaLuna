@@ -1,0 +1,374 @@
+/* ==================================================
+   LA TAPADA DE LUNA
+   INTRO / UNA NUEVA HISTORIA
+   ================================================== */
+
+.section--intro {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: clamp(120px, 15vw, 220px) 0;
+
+  background-color: var(--color-paper);
+}
+
+
+/* ==================================================
+   INTRO · BACKGROUND DETAILS
+   ================================================== */
+
+.section--intro::before {
+  content: "";
+
+  position: absolute;
+
+  top: 10%;
+  right: -120px;
+
+  width: 420px;
+  height: 420px;
+
+  border: 1px solid
+    rgba(112, 125, 108, 0.22);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.section--intro::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -180px;
+  left: -180px;
+
+  width: 420px;
+  height: 420px;
+
+  border: 1px solid
+    rgba(159, 108, 52, 0.18);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* ==================================================
+   INTRO · LAYOUT
+   ================================================== */
+
+.intro__inner {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+
+.intro__grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 0.35fr)
+    minmax(0, 1fr);
+
+  gap: clamp(40px, 8vw, 140px);
+
+  align-items: start;
+}
+
+
+/* ==================================================
+   INTRO · NUMBER
+   ================================================== */
+
+.intro__number {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding-top: 12px;
+
+  font-family: var(--font-body);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  color: var(--color-copper);
+}
+
+
+.intro__number::after {
+  content: "";
+
+  width: 60px;
+  height: 1px;
+
+  background-color: var(--color-copper);
+}
+
+
+/* ==================================================
+   INTRO · CONTENT
+   ================================================== */
+
+.intro__content {
+  max-width: 980px;
+}
+
+
+.intro__eyebrow {
+  margin-bottom: 26px;
+}
+
+
+.intro__title {
+  max-width: 900px;
+
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(
+    64px,
+    8vw,
+    128px
+  );
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.045em;
+
+  color: var(--color-charcoal);
+}
+
+
+.intro__title em {
+  color: var(--color-agave);
+
+  font-style: italic;
+}
+
+
+.intro__description {
+  max-width: 720px;
+
+  margin: 52px 0 0;
+
+  font-family: var(--font-body);
+
+  font-size: clamp(
+    17px,
+    1.5vw,
+    22px
+  );
+
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  color: var(--color-charcoal);
+}
+
+
+/* ==================================================
+   INTRO · KEYWORDS
+   ================================================== */
+
+.intro__keywords {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px 28px;
+
+  margin-top: 54px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid
+    rgba(84, 84, 84, 0.22);
+}
+
+
+.intro__keyword {
+  font-family: var(--font-body);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color: var(--color-charcoal);
+}
+
+
+.intro__keyword:not(:last-child)::after {
+  content: "·";
+
+  margin-left: 28px;
+
+  color: var(--color-copper);
+}
+
+
+/* ==================================================
+   INTRO · DECORATIVE EMBLEM
+   ================================================== */
+
+.intro__emblem {
+  position: absolute;
+
+  right: 4%;
+  bottom: 8%;
+
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.7;
+}
+
+
+.intro__emblem::before {
+  content: "";
+
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid
+    var(--color-agave);
+
+  transform: rotate(45deg);
+}
+
+
+.intro__emblem::after {
+  content: "";
+
+  position: absolute;
+
+  width: 28px;
+  height: 28px;
+
+  border: 1px solid
+    var(--color-copper);
+
+  transform: rotate(45deg);
+}
+
+
+/* ==================================================
+   INTRO · RESPONSIVE
+   ================================================== */
+
+@media (max-width: 900px) {
+
+  .section--intro {
+    padding: 110px 0;
+  }
+
+
+  .intro__grid {
+    grid-template-columns: 1fr;
+
+    gap: 34px;
+  }
+
+
+  .intro__number {
+    padding-top: 0;
+  }
+
+
+  .intro__title {
+    font-size: clamp(
+      58px,
+      15vw,
+      100px
+    );
+  }
+
+
+  .intro__description {
+    margin-top: 38px;
+  }
+
+
+  .intro__emblem {
+    right: -20px;
+    bottom: 40px;
+
+    opacity: 0.45;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .section--intro {
+    padding: 90px 0;
+  }
+
+
+  .intro__title {
+    font-size: 17vw;
+
+    line-height: 0.9;
+  }
+
+
+  .intro__description {
+    margin-top: 30px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+
+  .intro__keywords {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+
+    margin-top: 38px;
+  }
+
+
+  .intro__keyword:not(:last-child)::after {
+    display: none;
+  }
+
+
+  .intro__emblem {
+    display: none;
+  }
+
+}
