@@ -1,0 +1,434 @@
+/* =========================================
+   LOCATION — 10
+   ========================================= */
+
+.location {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-paper);
+  color: var(--color-charcoal);
+}
+
+
+/* =========================================
+   INNER
+   ========================================= */
+
+.location__inner {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+  padding: 120px var(--container-padding);
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.location__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 70px;
+}
+
+.location__number {
+  padding-top: 8px;
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+
+  color: var(--color-copper);
+}
+
+.location__eyebrow {
+  margin-bottom: 18px;
+  color: var(--color-copper);
+}
+
+.location__title {
+  max-width: 850px;
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(64px, 8vw, 120px);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+
+  color: var(--color-charcoal);
+}
+
+.location__title em {
+  font-style: italic;
+  color: var(--color-agave);
+}
+
+
+/* =========================================
+   MAIN GRID
+   ========================================= */
+
+.location__main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 70px;
+  align-items: stretch;
+}
+
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.location__visual {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+  background: var(--color-sand);
+}
+
+.location__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  filter: saturate(0.8);
+
+  transition:
+    transform 1s ease,
+    filter 700ms ease;
+}
+
+.location__visual:hover img {
+  transform: scale(1.035);
+  filter: saturate(1);
+}
+
+
+/* Image caption */
+
+.location__caption {
+  position: absolute;
+  left: 28px;
+  bottom: 26px;
+
+  padding: 9px 14px;
+
+  background: rgba(20, 20, 20, 0.78);
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--color-paper);
+}
+
+
+/* =========================================
+   INFO
+   ========================================= */
+
+.location__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 650px;
+  padding: 10px 0;
+}
+
+.location__info-label {
+  margin: 0 0 14px;
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--color-copper);
+}
+
+.location__name {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(42px, 4vw, 64px);
+  font-weight: 400;
+  line-height: 0.95;
+
+  color: var(--color-charcoal);
+}
+
+.location__name em {
+  font-style: italic;
+  color: var(--color-agave);
+}
+
+.location__description {
+  max-width: 430px;
+  margin: 28px 0 0;
+
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: rgba(84, 84, 84, 0.78);
+}
+
+
+/* =========================================
+   DETAILS
+   ========================================= */
+
+.location__details {
+  margin-top: 55px;
+  border-top: 1px solid rgba(84, 84, 84, 0.22);
+}
+
+.location__detail {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 24px;
+
+  padding: 19px 0;
+
+  border-bottom: 1px solid rgba(84, 84, 84, 0.22);
+}
+
+.location__detail-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: var(--color-copper);
+}
+
+.location__detail-value {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: var(--color-charcoal);
+}
+
+
+/* =========================================
+   RITUAL LOCATION
+   ========================================= */
+
+.location__ritual {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: 36px;
+  padding-top: 28px;
+
+  border-top: 1px solid rgba(84, 84, 84, 0.22);
+}
+
+.location__ritual-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  border: 1px solid var(--color-copper);
+
+  color: var(--color-copper);
+  font-size: 20px;
+}
+
+.location__ritual-text {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  color: var(--color-charcoal);
+}
+
+.location__ritual-text strong {
+  display: block;
+  margin-bottom: 3px;
+
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   MAP / CTA
+   ========================================= */
+
+.location__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-top: 40px;
+}
+
+.location__map-note {
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: rgba(84, 84, 84, 0.5);
+}
+
+
+/* =========================================
+   DECORATIVE FILM
+   ========================================= */
+
+.location__film {
+  position: absolute;
+  right: -70px;
+  bottom: 70px;
+
+  width: 220px;
+  height: 110px;
+
+  border: 1px solid rgba(84, 84, 84, 0.12);
+
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+.location__film::before,
+.location__film::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+
+  width: 12px;
+
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(84, 84, 84, 0.12) 0 8px,
+      transparent 8px 17px
+    );
+}
+
+.location__film::before {
+  left: 10px;
+}
+
+.location__film::after {
+  right: 10px;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  .location__main {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .location__visual {
+    min-height: 560px;
+  }
+
+  .location__info {
+    min-height: auto;
+  }
+
+  .location__description {
+    max-width: 650px;
+  }
+
+  .location__details {
+    max-width: 700px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .location__inner {
+    padding: 80px 24px;
+  }
+
+  .location__header {
+    gap: 14px;
+    margin-bottom: 50px;
+  }
+
+  .location__number {
+    padding-top: 5px;
+    font-size: 10px;
+  }
+
+  .location__title {
+    font-size: clamp(58px, 17vw, 84px);
+  }
+
+  .location__visual {
+    min-height: 430px;
+  }
+
+  .location__caption {
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .location__name {
+    font-size: 45px;
+  }
+
+  .location__description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .location__detail {
+    grid-template-columns: 80px 1fr;
+    gap: 16px;
+  }
+
+  .location__ritual {
+    margin-top: 30px;
+  }
+
+  .location__actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .location__film {
+    right: -100px;
+    bottom: 30px;
+    opacity: 0.5;
+  }
+
+}
