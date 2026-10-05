@@ -1,374 +1,619 @@
-/* ==================================================
-   LA TAPADA DE LUNA
-   INTRO / UNA NUEVA HISTORIA
-   ================================================== */
+/* =========================================
+   INTRO THIN — 03
+   ========================================= */
 
-.section--intro {
+.intro-thin {
   position: relative;
+
+  min-height: 185px;
 
   overflow: hidden;
 
-  padding: clamp(120px, 15vw, 220px) 0;
+  background: #d8d0c2;
 
-  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+
+  border-top: 1px solid rgba(84, 84, 84, 0.2);
+  border-bottom: 1px solid rgba(84, 84, 84, 0.2);
 }
 
 
-/* ==================================================
-   INTRO · BACKGROUND DETAILS
-   ================================================== */
+/* =========================================
+   PAPER TEXTURE
+   ========================================= */
 
-.section--intro::before {
+.intro-thin::before {
   content: "";
 
   position: absolute;
-
-  top: 10%;
-  right: -120px;
-
-  width: 420px;
-  height: 420px;
-
-  border: 1px solid
-    rgba(112, 125, 108, 0.22);
-
-  border-radius: 50%;
+  inset: 0;
 
   pointer-events: none;
+
+  opacity: 0.18;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+
+  mix-blend-mode: multiply;
+
+  z-index: 1;
 }
 
 
-.section--intro::after {
-  content: "";
+/* =========================================
+   DECORATIVE BACKGROUND
+   ========================================= */
 
+.intro-thin__bg {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+
+/* =========================================
+   FINE LINES
+   ========================================= */
+
+.intro-thin__bg-line {
   position: absolute;
 
-  bottom: -180px;
-  left: -180px;
+  display: block;
 
-  width: 420px;
-  height: 420px;
+  height: 1px;
 
-  border: 1px solid
-    rgba(159, 108, 52, 0.18);
+  background: rgba(84, 84, 84, 0.18);
 
-  border-radius: 50%;
+  transform-origin: left center;
+}
 
-  pointer-events: none;
+.intro-thin__bg-line--1 {
+  width: 42%;
+
+  left: -5%;
+  top: 28%;
+
+  transform: rotate(-4deg);
+}
+
+.intro-thin__bg-line--2 {
+  width: 30%;
+
+  right: -3%;
+  top: 70%;
+
+  transform: rotate(5deg);
+}
+
+.intro-thin__bg-line--3 {
+  width: 22%;
+
+  left: 38%;
+  bottom: 13%;
+
+  background: rgba(159, 108, 52, 0.3);
+
+  transform: rotate(-2deg);
 }
 
 
-/* ==================================================
-   INTRO · LAYOUT
-   ================================================== */
+/* =========================================
+   CIRCLES
+   ========================================= */
 
-.intro__inner {
+.intro-thin__circle {
+  position: absolute;
+
+  display: block;
+
+  border: 1px solid rgba(112, 125, 108, 0.25);
+
+  border-radius: 50%;
+}
+
+.intro-thin__circle--1 {
+  width: 240px;
+  height: 240px;
+
+  right: -95px;
+  top: -115px;
+}
+
+.intro-thin__circle--2 {
+  width: 130px;
+  height: 130px;
+
+  left: 18%;
+  bottom: -95px;
+
+  border-color: rgba(159, 108, 52, 0.2);
+}
+
+
+/* =========================================
+   CROSSES
+   ========================================= */
+
+.intro-thin__cross {
+  position: absolute;
+
+  font-family: var(--font-body);
+  font-size: 18px;
+
+  color: rgba(159, 108, 52, 0.45);
+}
+
+.intro-thin__cross--1 {
+  left: 8%;
+  top: 24%;
+}
+
+.intro-thin__cross--2 {
+  right: 28%;
+  bottom: 20%;
+}
+
+
+/* =========================================
+   COORDINATES
+   ========================================= */
+
+.intro-thin__coordinates {
+  position: absolute;
+
+  right: 24px;
+  bottom: 12px;
+
+  font-family: var(--font-body);
+  font-size: 7px;
+  letter-spacing: 0.2em;
+
+  color: rgba(84, 84, 84, 0.4);
+
+  transform: rotate(-90deg);
+
+  transform-origin: right bottom;
+}
+
+
+/* =========================================
+   GIANT 2026
+   ========================================= */
+
+.intro-thin__edition-mark {
+  position: absolute;
+
+  right: 5%;
+  top: 50%;
+
+  font-family: var(--font-display);
+  font-size: 180px;
+  font-weight: 400;
+  line-height: 1;
+
+  color: rgba(112, 125, 108, 0.075);
+
+  transform: translateY(-50%);
+
+  user-select: none;
+}
+
+
+/* =========================================
+   INNER
+   ========================================= */
+
+.intro-thin__inner {
   position: relative;
 
-  z-index: 2;
+  z-index: 3;
 
-  width: min(
-    calc(100% - (var(--container-padding) * 2)),
-    var(--container-width)
-  );
+  width: min(100%, var(--container-width));
+  min-height: 185px;
 
-  margin-inline: auto;
-}
+  margin: 0 auto;
 
+  padding: 38px var(--container-padding);
 
-.intro__grid {
   display: grid;
 
   grid-template-columns:
-    minmax(180px, 0.35fr)
-    minmax(0, 1fr);
-
-  gap: clamp(40px, 8vw, 140px);
-
-  align-items: start;
-}
-
-
-/* ==================================================
-   INTRO · NUMBER
-   ================================================== */
-
-.intro__number {
-  display: flex;
+    auto
+    auto
+    1px
+    minmax(280px, 1fr)
+    auto
+    auto;
 
   align-items: center;
 
-  gap: 14px;
+  gap: 28px;
+}
 
-  padding-top: 12px;
+
+/* =========================================
+   NUMBER
+   ========================================= */
+
+.intro-thin__number {
+  align-self: flex-start;
 
   font-family: var(--font-body);
-
   font-size: 10px;
-  font-weight: 600;
-
   letter-spacing: 0.18em;
 
   color: var(--color-copper);
 }
 
 
-.intro__number::after {
-  content: "";
+/* =========================================
+   LABEL
+   ========================================= */
 
-  width: 60px;
-  height: 1px;
+.intro-thin__label {
+  display: flex;
+  flex-direction: column;
 
-  background-color: var(--color-copper);
+  gap: 5px;
+}
+
+.intro-thin__eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--color-charcoal);
+}
+
+.intro-thin__edition {
+  font-family: var(--font-body);
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: rgba(84, 84, 84, 0.5);
 }
 
 
-/* ==================================================
-   INTRO · CONTENT
-   ================================================== */
+/* =========================================
+   DIVIDER
+   ========================================= */
 
-.intro__content {
-  max-width: 980px;
+.intro-thin__line {
+  width: 1px;
+  height: 65px;
+
+  background: rgba(84, 84, 84, 0.22);
 }
 
 
-.intro__eyebrow {
-  margin-bottom: 26px;
+/* =========================================
+   MESSAGE
+   ========================================= */
+
+.intro-thin__message {
+  display: flex;
+  align-items: baseline;
+
+  gap: 16px;
 }
 
-
-.intro__title {
-  max-width: 900px;
-
+.intro-thin__message h2 {
   margin: 0;
 
   font-family: var(--font-display);
-
-  font-size: clamp(
-    64px,
-    8vw,
-    128px
-  );
-
+  font-size: clamp(30px, 3vw, 46px);
   font-weight: 400;
+  line-height: 1;
 
-  line-height: 0.88;
-
-  letter-spacing: -0.045em;
+  letter-spacing: -0.02em;
 
   color: var(--color-charcoal);
 }
 
+.intro-thin__message p {
+  margin: 0;
 
-.intro__title em {
-  color: var(--color-agave);
-
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.6vw, 24px);
   font-style: italic;
+
+  color: var(--color-agave);
 }
 
 
-.intro__description {
-  max-width: 720px;
+/* =========================================
+   KEYWORDS
+   ========================================= */
 
-  margin: 52px 0 0;
-
-  font-family: var(--font-body);
-
-  font-size: clamp(
-    17px,
-    1.5vw,
-    22px
-  );
-
-  font-weight: 400;
-
-  line-height: 1.65;
-
-  color: var(--color-charcoal);
-}
-
-
-/* ==================================================
-   INTRO · KEYWORDS
-   ================================================== */
-
-.intro__keywords {
+.intro-thin__elements {
   display: flex;
+  flex-direction: column;
 
-  flex-wrap: wrap;
+  gap: 6px;
 
-  gap: 12px 28px;
+  padding-left: 20px;
 
-  margin-top: 54px;
-
-  padding-top: 24px;
-
-  border-top: 1px solid
-    rgba(84, 84, 84, 0.22);
+  border-left: 1px solid rgba(159, 108, 52, 0.35);
 }
 
-
-.intro__keyword {
+.intro-thin__elements span {
   font-family: var(--font-body);
+  font-size: 9px;
 
-  font-size: 10px;
-  font-weight: 600;
-
-  letter-spacing: 0.16em;
-
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 
   color: var(--color-charcoal);
 }
 
 
-.intro__keyword:not(:last-child)::after {
-  content: "·";
+/* =========================================
+   AGAVE IMAGE
+   ========================================= */
 
-  margin-left: 28px;
+.intro-thin__agave {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+}
+
+.intro-thin__agave img {
+  display: block;
+
+  width: 82px;
+  height: 82px;
+
+  object-fit: contain;
+
+  opacity: 0.85;
+
+  mix-blend-mode: multiply;
+
+  transition:
+    transform 600ms ease,
+    opacity 400ms ease;
+}
+
+.intro-thin:hover .intro-thin__agave img {
+  opacity: 1;
+
+  transform: rotate(-4deg) scale(1.04);
+}
+
+
+/* =========================================
+   AGAVE MARK
+   ========================================= */
+
+.intro-thin__agave-mark {
+  position: absolute;
+
+  width: 74px;
+  height: 74px;
+
+  border: 1px solid rgba(159, 108, 52, 0.28);
+  border-radius: 50%;
+
+  transform: rotate(18deg);
+}
+
+
+/* =========================================
+   TAPADA DETAIL
+   ========================================= */
+
+.intro-thin__tapada {
+  position: absolute;
+
+  right: var(--container-padding);
+  bottom: 7px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  opacity: 0.6;
+}
+
+.intro-thin__tapada-line {
+  width: 28px;
+  height: 1px;
+
+  background: var(--color-copper);
+}
+
+.intro-thin__tapada-text {
+  font-family: var(--font-body);
+  font-size: 7px;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--color-charcoal);
+}
+
+.intro-thin__tapada-year {
+  font-family: var(--font-display);
+  font-size: 12px;
 
   color: var(--color-copper);
 }
 
 
-/* ==================================================
-   INTRO · DECORATIVE EMBLEM
-   ================================================== */
+/* =========================================
+   TABLET
+   ========================================= */
 
-.intro__emblem {
-  position: absolute;
+@media (max-width: 1100px) {
 
-  right: 4%;
-  bottom: 8%;
+  .intro-thin__inner {
+    grid-template-columns:
+      auto
+      auto
+      1px
+      1fr
+      auto;
 
-  width: 100px;
-  height: 100px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0.7;
-}
-
-
-.intro__emblem::before {
-  content: "";
-
-  width: 58px;
-  height: 58px;
-
-  border: 1px solid
-    var(--color-agave);
-
-  transform: rotate(45deg);
-}
-
-
-.intro__emblem::after {
-  content: "";
-
-  position: absolute;
-
-  width: 28px;
-  height: 28px;
-
-  border: 1px solid
-    var(--color-copper);
-
-  transform: rotate(45deg);
-}
-
-
-/* ==================================================
-   INTRO · RESPONSIVE
-   ================================================== */
-
-@media (max-width: 900px) {
-
-  .section--intro {
-    padding: 110px 0;
+    gap: 22px;
   }
 
-
-  .intro__grid {
-    grid-template-columns: 1fr;
-
-    gap: 34px;
+  .intro-thin__elements {
+    display: none;
   }
 
-
-  .intro__number {
-    padding-top: 0;
+  .intro-thin__agave {
+    width: 85px;
+    height: 85px;
   }
 
-
-  .intro__title {
-    font-size: clamp(
-      58px,
-      15vw,
-      100px
-    );
-  }
-
-
-  .intro__description {
-    margin-top: 38px;
-  }
-
-
-  .intro__emblem {
-    right: -20px;
-    bottom: 40px;
-
-    opacity: 0.45;
+  .intro-thin__agave img {
+    width: 70px;
+    height: 70px;
   }
 
 }
 
 
-@media (max-width: 600px) {
+/* =========================================
+   MOBILE
+   ========================================= */
 
-  .section--intro {
-    padding: 90px 0;
+@media (max-width: 700px) {
+
+  .intro-thin {
+    min-height: 205px;
+  }
+
+  .intro-thin__inner {
+    min-height: 205px;
+
+    padding: 28px 24px;
+
+    grid-template-columns:
+      auto
+      1fr
+      auto;
+
+    grid-template-rows:
+      auto
+      1fr;
+
+    align-items: start;
+
+    gap: 14px;
   }
 
 
-  .intro__title {
-    font-size: 17vw;
+  /* Number */
 
-    line-height: 0.9;
+  .intro-thin__number {
+    padding-top: 3px;
   }
 
 
-  .intro__description {
-    margin-top: 30px;
+  /* Label */
 
-    font-size: 16px;
-
-    line-height: 1.7;
+  .intro-thin__label {
+    align-self: start;
   }
 
 
-  .intro__keywords {
-    display: grid;
+  /* Hide desktop divider */
 
-    grid-template-columns: 1fr 1fr;
-
-    gap: 16px;
-
-    margin-top: 38px;
-  }
-
-
-  .intro__keyword:not(:last-child)::after {
+  .intro-thin__line {
     display: none;
   }
 
 
-  .intro__emblem {
+  /* Message */
+
+  .intro-thin__message {
+    grid-column: 1 / 3;
+
+    display: block;
+
+    padding-top: 18px;
+  }
+
+  .intro-thin__message h2 {
+    font-size: 34px;
+  }
+
+  .intro-thin__message p {
+    margin-top: 7px;
+
+    font-size: 19px;
+  }
+
+
+  /* Agave */
+
+  .intro-thin__agave {
+    grid-column: 3;
+    grid-row: 1 / 3;
+
+    width: 72px;
+    height: 72px;
+
+    margin-top: 8px;
+  }
+
+  .intro-thin__agave img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .intro-thin__agave-mark {
+    width: 58px;
+    height: 58px;
+  }
+
+
+  /* Tapada */
+
+  .intro-thin__tapada {
+    left: 24px;
+    right: auto;
+    bottom: 15px;
+  }
+
+
+  /* Background */
+
+  .intro-thin__edition-mark {
+    right: -10px;
+    top: 50%;
+
+    font-size: 125px;
+  }
+
+  .intro-thin__coordinates {
     display: none;
+  }
+
+  .intro-thin__circle--1 {
+    width: 180px;
+    height: 180px;
+
+    right: -90px;
+    top: -80px;
   }
 
 }
