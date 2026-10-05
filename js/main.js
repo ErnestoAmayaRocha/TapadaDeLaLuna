@@ -72,3 +72,86 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  const track = carousel.querySelector(".memory-carousel__track");
+  const slides = carousel.querySelectorAll(".memory-carousel__slide");
+  const prev = carousel.querySelector(".memory-carousel__arrow--prev");
+  const next = carousel.querySelector(".memory-carousel__arrow--next");
+  const dotsContainer = carousel.querySelector(".memory-carousel__dots");
+
+  let current = 0;
+
+  if (slides.length <= 1) return;
+
+  // Crear dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+
+    dot.type = "button";
+    dot.className = "memory-carousel__dot";
+
+    dot.setAttribute(
+      "aria-label",
+      `Ir a imagen ${index + 1}`
+    );
+
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll(
+    ".memory-carousel__dot"
+  );
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${current * 100}%)`;
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle(
+        "is-active",
+        index === current
+      );
+    });
+  }
+
+  function goToSlide(index) {
+    current = (index + slides.length) % slides.length;
+    updateCarousel();
+  }
+
+  prev.addEventListener("click", () => {
+    goToSlide(current - 1);
+  });
+
+  next.addEventListener("click", () => {
+    goToSlide(current + 1);
+  });
+
+  updateCarousel();
+});
+
+document.querySelectorAll(".memory-card__video").forEach((video) => {
+  const button = video.parentElement.querySelector(
+    ".memory-video__play"
+  );
+
+  button.addEventListener("click", () => {
+
+    if (video.paused) {
+      video.play();
+      button.innerHTML = '<i class="ph ph-pause"></i>';
+    } else {
+      video.pause();
+      button.innerHTML = '<i class="ph ph-play"></i>';
+    }
+
+  });
+
+  video.addEventListener("ended", () => {
+    button.innerHTML = '<i class="ph ph-play"></i>';
+  });
+});
