@@ -15,12 +15,12 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/hero.css" />
@@ -32,12 +32,7 @@
     <link rel="stylesheet" href="./css/tickets.css" />
     <link rel="stylesheet" href="css/creators.css" />
     <link rel="stylesheet" href="css/location.css" />
-<link rel="stylesheet" href="css/memories.css" />
-
-
-
-
-
+    <link rel="stylesheet" href="css/memories.css" />
   </head>
 
   <body>
@@ -198,58 +193,48 @@
 
       <section class="intro-thin" id="historia" aria-labelledby="intro-thin-title">
 
-  <!-- Elementos decorativos -->
   <div class="intro-thin__bg" aria-hidden="true">
     <div class="intro-thin__texture"></div>
 
-    <span class="intro-thin__line intro-thin__line--1"></span>
-    <span class="intro-thin__line intro-thin__line--2"></span>
-    <span class="intro-thin__line intro-thin__line--3"></span>
-
-    <span class="intro-thin__circle intro-thin__circle--1"></span>
-    <span class="intro-thin__circle intro-thin__circle--2"></span>
-    <span class="intro-thin__circle intro-thin__circle--3"></span>
-
-    <span class="intro-thin__cross intro-thin__cross--1">+</span>
-    <span class="intro-thin__cross intro-thin__cross--2">+</span>
-    <span class="intro-thin__cross intro-thin__cross--3">+</span>
-
     <span class="intro-thin__edition-mark">2026</span>
-
     <span class="intro-thin__coordinates">
       23°51′ · 104°14′ · DURANGO
     </span>
 
-    <div class="intro-thin__stamp">
-      <span>AGAVE</span>
-      <span>&</span>
-      <span>ENCUADRE</span>
-    </div>
+    <span class="intro-thin__cross intro-thin__cross--1">+</span>
+    <span class="intro-thin__cross intro-thin__cross--2">+</span>
+    <span class="intro-thin__cross intro-thin__cross--3">+</span>
   </div>
 
 
   <div class="intro-thin__inner">
 
-    <!-- Número de sección -->
-    <span class="intro-thin__number">03</span>
+    <!-- Número -->
+    <div class="intro-thin__section">
+      <span class="intro-thin__number">03</span>
 
+      <div class="intro-thin__section-info">
+        <span class="intro-thin__eyebrow">
+          Agave y Encuadre
+        </span>
 
-    <!-- Identificación -->
-    <div class="intro-thin__label">
-      <span class="intro-thin__eyebrow">
-        Agave y Encuadre
-      </span>
-
-      <span class="intro-thin__edition">
-        Edición 2026
-      </span>
+        <span class="intro-thin__edition">
+          Edición 2026
+        </span>
+      </div>
     </div>
 
 
-    <span class="intro-thin__divider"></span>
+    <!-- Imagen 1 -->
+    <div class="intro-thin__image intro-thin__image--agave">
+      <img
+        src="./assets/img/Kit_Canva_La_Tapada_2026/02_Recursos/Agave_botanico.png"
+        alt="Agave botánico"
+      />
+    </div>
 
 
-    <!-- Mensaje principal -->
+    <!-- Mensaje -->
     <div class="intro-thin__message">
 
       <span class="intro-thin__small-title">
@@ -257,7 +242,8 @@
       </span>
 
       <h2 id="intro-thin-title">
-        Una nueva edición.
+        Una nueva<br>
+        <em>edición.</em>
       </h2>
 
       <p>
@@ -267,7 +253,28 @@
     </div>
 
 
-    <!-- Iconografía -->
+    <!-- Film frame -->
+    <div class="intro-thin__film-frame">
+
+      <span class="intro-thin__film-label">
+        FRAME / 26
+      </span>
+
+      <div class="intro-thin__film-image">
+        <img
+          src="./assets/img/Kit_Canva_La_Tapada_2026/02_Recursos/Agave_botanico.png"
+          alt=""
+        />
+      </div>
+
+      <span class="intro-thin__film-number">
+        01
+      </span>
+
+    </div>
+
+
+    <!-- Iconos -->
     <div class="intro-thin__icons">
 
       <div class="intro-thin__icon">
@@ -303,33 +310,16 @@
     </div>
 
 
-    <!-- Agave -->
-    <div class="intro-thin__agave">
+    <!-- Firma -->
+    <div class="intro-thin__signature">
 
-      <img
-        src="./assets/img/Kit_Canva_La_Tapada_2026/02_Recursos/Agave_botanico.png"
-        alt="Agave botánico"
-      />
+      <span class="intro-thin__signature-line"></span>
 
-      <span class="intro-thin__agave-circle"></span>
-
-      <span class="intro-thin__agave-label">
-        AGAVE
-      </span>
-
-    </div>
-
-
-    <!-- Detalle La Tapada -->
-    <div class="intro-thin__tapada">
-
-      <span class="intro-thin__tapada-line"></span>
-
-      <span class="intro-thin__tapada-text">
+      <span class="intro-thin__signature-name">
         La Tapada
       </span>
 
-      <span class="intro-thin__tapada-year">
+      <span class="intro-thin__signature-year">
         2026
       </span>
 
@@ -764,956 +754,670 @@
       </section>
 
       <!-- INCLUDES -->
-      <section
-  class="includes"
-  id="incluye"
-  aria-labelledby="includes-label"
->
+      <section class="includes" id="incluye" aria-labelledby="includes-label">
+        <div class="includes__inner">
+          <header class="includes__header">
+            <span class="includes__number"> 07 </span>
 
-  <div class="includes__inner">
+            <p class="eyebrow includes__eyebrow" id="includes-label">
+              Tu acceso incluye
+            </p>
 
-    <header class="includes__header">
+            <p class="includes__intro">
+              Una experiencia completa de mezcal, gastronomía, música y ritual.
+            </p>
+          </header>
 
-      <span class="includes__number">
-        07
-      </span>
+          <div class="includes__grid">
+            <article class="include-item">
+              <div class="include-item__icon">
+                <i class="ph ph-gift"></i>
+              </div>
 
-      <p class="eyebrow includes__eyebrow" id="includes-label">
-        Tu acceso incluye
-      </p>
+              <div class="include-item__content">
+                <h3 class="include-item__name">Kit y cóctel</h3>
 
-      <p class="includes__intro">
-        Una experiencia completa de mezcal, gastronomía, música y ritual.
-      </p>
+                <p class="include-item__detail">Bienvenida</p>
+              </div>
+            </article>
 
-    </header>
+            <article class="include-item">
+              <div class="include-item__icon">
+                <i class="ph ph-wine"></i>
+              </div>
 
+              <div class="include-item__content">
+                <h3 class="include-item__name">Cata-maridaje</h3>
 
-    <div class="includes__grid">
+                <p class="include-item__detail">Mezcal</p>
+              </div>
+            </article>
 
-      <article class="include-item">
+            <article class="include-item">
+              <div class="include-item__icon">
+                <i class="ph ph-fire"></i>
+              </div>
 
-        <div class="include-item__icon">
-          <i class="ph ph-gift"></i>
+              <div class="include-item__content">
+                <h3 class="include-item__name">Cena de asador</h3>
+
+                <p class="include-item__detail">Cuatro tiempos</p>
+              </div>
+            </article>
+
+            <article class="include-item">
+              <div class="include-item__icon">
+                <i class="ph ph-martini"></i>
+              </div>
+
+              <div class="include-item__content">
+                <h3 class="include-item__name">Bebidas</h3>
+
+                <p class="include-item__detail">4:00 · 9:30 P. M.</p>
+              </div>
+            </article>
+
+            <article class="include-item">
+              <div class="include-item__icon">
+                <i class="ph ph-plant"></i>
+              </div>
+
+              <div class="include-item__content">
+                <h3 class="include-item__name">La Tapada</h3>
+
+                <p class="include-item__detail">Ritual</p>
+              </div>
+            </article>
+
+            <article class="include-item">
+              <div class="include-item__icon">
+                <i class="ph ph-music-notes"></i>
+              </div>
+
+              <div class="include-item__content">
+                <h3 class="include-item__name">Los Faritos</h3>
+
+                <p class="include-item__detail">Música</p>
+              </div>
+            </article>
+
+            <article class="include-item">
+              <div class="include-item__icon">
+                <i class="ph ph-film-strip"></i>
+              </div>
+
+              <div class="include-item__content">
+                <h3 class="include-item__name">Proyecciones</h3>
+
+                <p class="include-item__detail">Reymal</p>
+              </div>
+            </article>
+
+            <article class="include-item">
+              <div class="include-item__icon">
+                <i class="ph ph-disc"></i>
+              </div>
+
+              <div class="include-item__content">
+                <h3 class="include-item__name">DJ Danny Khas</h3>
+
+                <p class="include-item__detail">Música · Noche</p>
+              </div>
+            </article>
+          </div>
         </div>
-
-        <div class="include-item__content">
-          <h3 class="include-item__name">
-            Kit y cóctel
-          </h3>
-
-          <p class="include-item__detail">
-            Bienvenida
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="include-item">
-
-        <div class="include-item__icon">
-          <i class="ph ph-wine"></i>
-        </div>
-
-        <div class="include-item__content">
-          <h3 class="include-item__name">
-            Cata-maridaje
-          </h3>
-
-          <p class="include-item__detail">
-            Mezcal
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="include-item">
-
-        <div class="include-item__icon">
-          <i class="ph ph-fire"></i>
-        </div>
-
-        <div class="include-item__content">
-          <h3 class="include-item__name">
-            Cena de asador
-          </h3>
-
-          <p class="include-item__detail">
-            Cuatro tiempos
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="include-item">
-
-        <div class="include-item__icon">
-          <i class="ph ph-martini"></i>
-        </div>
-
-        <div class="include-item__content">
-          <h3 class="include-item__name">
-            Bebidas
-          </h3>
-
-          <p class="include-item__detail">
-            4:00 · 9:30 P. M.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="include-item">
-
-        <div class="include-item__icon">
-          <i class="ph ph-plant"></i>
-        </div>
-
-        <div class="include-item__content">
-          <h3 class="include-item__name">
-            La Tapada
-          </h3>
-
-          <p class="include-item__detail">
-            Ritual
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="include-item">
-
-        <div class="include-item__icon">
-          <i class="ph ph-music-notes"></i>
-        </div>
-
-        <div class="include-item__content">
-          <h3 class="include-item__name">
-            Los Faritos
-          </h3>
-
-          <p class="include-item__detail">
-            Música
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="include-item">
-
-        <div class="include-item__icon">
-          <i class="ph ph-film-strip"></i>
-        </div>
-
-        <div class="include-item__content">
-          <h3 class="include-item__name">
-            Proyecciones
-          </h3>
-
-          <p class="include-item__detail">
-            Reymal
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="include-item">
-
-        <div class="include-item__icon">
-          <i class="ph ph-disc"></i>
-        </div>
-
-        <div class="include-item__content">
-          <h3 class="include-item__name">
-            DJ Danny Khas
-          </h3>
-
-          <p class="include-item__detail">
-            Música · Noche
-          </p>
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
+      </section>
 
       <!-- TICKETS -->
-   <section
-  class="tickets"
-  id="boletos"
-  aria-labelledby="tickets-title"
->
+      <section class="tickets" id="boletos" aria-labelledby="tickets-title">
+        <!-- IMAGEN TEMPORAL -->
+        <div class="tickets__background">
+          <img
+            src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/fondo.jpg"
+            alt="Experiencia alrededor del fuego"
+            loading="lazy"
+          />
 
-  <!-- IMAGEN TEMPORAL -->
-  <div class="tickets__background">
-    <img
-      src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/fondo.jpg"
-      alt="Experiencia alrededor del fuego"
-      loading="lazy"
-    />
-
-    <div class="tickets__overlay"></div>
-    <div class="tickets__grain"></div>
-  </div>
-
-
-  <div class="tickets__inner">
-
-   <header class="tickets__header">
-  <div class="tickets__header-title">
-    <span class="tickets__number">08</span>
-
-    <div>
-      <p class="eyebrow tickets__eyebrow">Boletos</p>
-
-      <h2 class="tickets__title" id="tickets-title">
-        Tu lugar<br />
-        <em>en la historia.</em>
-      </h2>
-    </div>
-  </div>
-
-  <div class="tickets__logos">
-    <img
-      src="./assets/img/Kit_Canva_La_Tapada_2026/01_Logotipos/La_Tapada_de_Luna_agave.png"
-      alt="La Tapada de Luna · Agave y Encuadre 2026"
-      class="tickets__logo tickets__logo--event"
-    />
-
-    <span class="tickets__logos-divider"></span>
-
-    <img
-      src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/Urajan-de-luna-logo-blanco-original-302w.webp"
-      alt="Uraján de Luna Hotel & Spa"
-      class="tickets__logo tickets__logo--hotel"
-    />
-  </div>
-</header>
-
-
-    <div class="tickets__content">
-
-      <div class="tickets__price-block">
-
-        <p class="tickets__phase">
-          Preventa fase 1
-        </p>
-
-        <p class="tickets__price">
-          $2,888
-        </p>
-
-        <span class="tickets__currency">
-          MXN · Por persona
-        </span>
-
-        <div class="tickets__cta">
-
-          <!-- Reemplazar cuando tengamos TicketMax -->
-          <a
-            href="#"
-            class="button button--copper"
-          >
-            Comprar boletos
-          </a>
-
+          <div class="tickets__overlay"></div>
+          <div class="tickets__grain"></div>
         </div>
 
-      </div>
+        <div class="tickets__inner">
+          <header class="tickets__header">
+            <div class="tickets__header-title">
+              <span class="tickets__number">08</span>
 
+              <div>
+                <p class="eyebrow tickets__eyebrow">Boletos</p>
 
-     <div class="tickets__details">
+                <h2 class="tickets__title" id="tickets-title">
+                  Tu lugar<br />
+                  <em>en la historia.</em>
+                </h2>
+              </div>
+            </div>
 
- 
+            <div class="tickets__logos">
+              <img
+                src="./assets/img/Kit_Canva_La_Tapada_2026/01_Logotipos/La_Tapada_de_Luna_agave.png"
+                alt="La Tapada de Luna · Agave y Encuadre 2026"
+                class="tickets__logo tickets__logo--event"
+              />
 
-  <div class="tickets__detail">
-    <span class="tickets__detail-label">Fecha</span>
-    <p class="tickets__detail-value">21 Nov 2026</p>
-  </div>
+              <span class="tickets__logos-divider"></span>
 
-  <div class="tickets__detail">
-    <span class="tickets__detail-label">Hora</span>
-    <p class="tickets__detail-value">4:00 P. M.</p>
-  </div>
+              <img
+                src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/Urajan-de-luna-logo-blanco-original-302w.webp"
+                alt="Uraján de Luna Hotel & Spa"
+                class="tickets__logo tickets__logo--hotel"
+              />
+            </div>
+          </header>
 
-  <div class="tickets__detail">
-    <span class="tickets__detail-label">Lugar</span>
-    <p class="tickets__detail-value">Nombre de Dios</p>
-  </div>
+          <div class="tickets__content">
+            <div class="tickets__price-block">
+              <p class="tickets__phase">Preventa fase 1</p>
 
-  <div class="tickets__detail">
-    <span class="tickets__detail-label">Sede</span>
-    <p class="tickets__detail-value">Uraján de Luna</p>
-  </div>
+              <p class="tickets__price">$2,888</p>
 
-</div>
+              <span class="tickets__currency"> MXN · Por persona </span>
 
-    </div>
+              <div class="tickets__cta">
+                <!-- Reemplazar cuando tengamos TicketMax -->
+                <a href="#" class="button button--copper"> Comprar boletos </a>
+              </div>
+            </div>
 
+            <div class="tickets__details">
+              <div class="tickets__detail">
+                <span class="tickets__detail-label">Fecha</span>
+                <p class="tickets__detail-value">21 Nov 2026</p>
+              </div>
 
-    <div class="tickets__frame" aria-hidden="true"></div>
+              <div class="tickets__detail">
+                <span class="tickets__detail-label">Hora</span>
+                <p class="tickets__detail-value">4:00 P. M.</p>
+              </div>
 
+              <div class="tickets__detail">
+                <span class="tickets__detail-label">Lugar</span>
+                <p class="tickets__detail-value">Nombre de Dios</p>
+              </div>
 
-    <div class="tickets__footnote">
+              <div class="tickets__detail">
+                <span class="tickets__detail-label">Sede</span>
+                <p class="tickets__detail-value">Uraján de Luna</p>
+              </div>
+            </div>
+          </div>
 
-      <p>
-        Preventa fase 1 · $2,888 MXN
-      </p>
+          <div class="tickets__frame" aria-hidden="true"></div>
 
-      <p>
-        Vigencia y cargos de servicio por confirmar
-      </p>
+          <div class="tickets__footnote">
+            <p>Preventa fase 1 · $2,888 MXN</p>
 
-    </div>
+            <p>Vigencia y cargos de servicio por confirmar</p>
+          </div>
 
-
-    <span class="tickets__mark">
-      La Tapada de Luna · Agave y Encuadre · 2026
-    </span>
-
-  </div>
-
-</section>
+          <span class="tickets__mark">
+            La Tapada de Luna · Agave y Encuadre · 2026
+          </span>
+        </div>
+      </section>
 
       <!-- CREATORS -->
       <!-- =========================================
      09 — CREADORES
      ========================================= -->
 
-<section class="creators" id="creadores" aria-labelledby="creators-title">
+      <section class="creators" id="creadores" aria-labelledby="creators-title">
+        <!-- Background -->
+        <div class="creators__background">
+          <img
+            src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=2200&q=90"
+            alt="Cámara fotográfica en un espacio creativo"
+            loading="lazy"
+          />
 
-  <!-- Background -->
-  <div class="creators__background">
-    <img
-      src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=2200&q=90"
-      alt="Cámara fotográfica en un espacio creativo"
-      loading="lazy"
-    />
+          <div class="creators__overlay"></div>
+          <div class="creators__grain"></div>
+        </div>
 
-    <div class="creators__overlay"></div>
-    <div class="creators__grain"></div>
-  </div>
+        <div class="creators__inner">
+          <!-- Header -->
+          <header class="creators__header">
+            <span class="creators__number">09</span>
 
+            <div>
+              <p class="eyebrow creators__eyebrow">Convocatoria</p>
 
-  <div class="creators__inner">
+              <h2 class="creators__title" id="creators-title">
+                La mirada<br />
+                <em>también cuenta.</em>
+              </h2>
+            </div>
+          </header>
 
-    <!-- Header -->
-    <header class="creators__header">
+          <!-- Content -->
+          <div class="creators__content">
+            <!-- Intro -->
+            <div class="creators__intro">
+              <p class="creators__intro-label">Jóvenes creadores</p>
 
-      <span class="creators__number">09</span>
+              <p class="creators__intro-text">
+                Una historia también puede contarse desde una cámara, una imagen
+                o una nueva forma de mirar.
+              </p>
 
-      <div>
-        <p class="eyebrow creators__eyebrow">
-          Convocatoria
-        </p>
+              <p class="creators__intro-copy">
+                La Tapada de Luna abre un espacio para creadores de artes
+                visuales, fotografía y audiovisual. Cuatro proyectos formarán
+                parte de esta edición y serán presentados durante la
+                experiencia.
+              </p>
+            </div>
 
-        <h2 class="creators__title" id="creators-title">
-          La mirada<br />
-          <em>también cuenta.</em>
-        </h2>
-      </div>
+            <!-- Projects -->
+            <div class="creators__projects">
+              <article class="creators__project">
+                <span class="creators__project-number"> 01 </span>
 
-    </header>
+                <h3 class="creators__project-title">Artes visuales</h3>
 
+                <p class="creators__project-type">Proyecto creativo</p>
+              </article>
 
-    <!-- Content -->
-    <div class="creators__content">
+              <article class="creators__project">
+                <span class="creators__project-number"> 02 </span>
 
-      <!-- Intro -->
-      <div class="creators__intro">
+                <h3 class="creators__project-title">Fotografía</h3>
 
-        <p class="creators__intro-label">
-          Jóvenes creadores
-        </p>
+                <p class="creators__project-type">Mirada documental</p>
+              </article>
 
-        <p class="creators__intro-text">
-          Una historia también puede contarse
-          desde una cámara, una imagen o una
-          nueva forma de mirar.
-        </p>
+              <article class="creators__project">
+                <span class="creators__project-number"> 03 </span>
 
-        <p class="creators__intro-copy">
-          La Tapada de Luna abre un espacio para
-          creadores de artes visuales, fotografía y
-          audiovisual. Cuatro proyectos formarán
-          parte de esta edición y serán presentados
-          durante la experiencia.
-        </p>
+                <h3 class="creators__project-title">Audiovisual</h3>
 
-      </div>
+                <p class="creators__project-type">Imagen en movimiento</p>
+              </article>
 
+              <article class="creators__project">
+                <span class="creators__project-number"> 04 </span>
 
-      <!-- Projects -->
-      <div class="creators__projects">
+                <h3 class="creators__project-title">Cuarto proyecto</h3>
 
-        <article class="creators__project">
+                <p class="creators__project-type">Por definir</p>
+              </article>
+            </div>
+          </div>
 
-          <span class="creators__project-number">
-            01
-          </span>
+          <!-- Footer -->
+          <div class="creators__footer">
+            <p class="creators__footer-text">
+              Exhibición · La Tapada de Luna · 2026
+            </p>
 
-          <h3 class="creators__project-title">
-            Artes visuales
-          </h3>
+            <a
+              href="./assets/AGAVE 59.pdf"
+              class="button button--outline"
+              aria-label="Conocer la convocatoria para creadores"
+            >
+              Conocer convocatoria
+            </a>
+          </div>
 
-          <p class="creators__project-type">
-            Proyecto creativo
-          </p>
-
-        </article>
-
-
-        <article class="creators__project">
-
-          <span class="creators__project-number">
-            02
-          </span>
-
-          <h3 class="creators__project-title">
-            Fotografía
-          </h3>
-
-          <p class="creators__project-type">
-            Mirada documental
-          </p>
-
-        </article>
-
-
-        <article class="creators__project">
-
-          <span class="creators__project-number">
-            03
-          </span>
-
-          <h3 class="creators__project-title">
-            Audiovisual
-          </h3>
-
-          <p class="creators__project-type">
-            Imagen en movimiento
-          </p>
-
-        </article>
-
-
-        <article class="creators__project">
-
-          <span class="creators__project-number">
-            04
-          </span>
-
-          <h3 class="creators__project-title">
-            Cuarto proyecto
-          </h3>
-
-          <p class="creators__project-type">
-            Por definir
-          </p>
-
-        </article>
-
-      </div>
-
-    </div>
-
-
-    <!-- Footer -->
-    <div class="creators__footer">
-
-      <p class="creators__footer-text">
-        Exhibición · La Tapada de Luna · 2026
-      </p>
-
-      <a
-        href="./assets/AGAVE 59.pdf"
-        class="button button--outline"
-        aria-label="Conocer la convocatoria para creadores"
-      >
-        Conocer convocatoria
-      </a>
-
-    </div>
-
-
-    <!-- Decorative film -->
-    <div
-      class="creators__film"
-      aria-hidden="true"
-    ></div>
-
-  </div>
-
-</section>
+          <!-- Decorative film -->
+          <div class="creators__film" aria-hidden="true"></div>
+        </div>
+      </section>
 
       <!-- LOCATION -->
-     <!-- =========================================
+      <!-- =========================================
      10 — LUGAR
      ========================================= -->
 
-<section class="location" id="ubicacion" aria-labelledby="location-title">
+      <section class="location" id="ubicacion" aria-labelledby="location-title">
+        <div class="location__inner">
+          <!-- Header -->
+          <header class="location__header">
+            <span class="location__number">10</span>
 
-  <div class="location__inner">
+            <div>
+              <p class="eyebrow location__eyebrow">El lugar</p>
 
-    <!-- Header -->
-    <header class="location__header">
+              <h2 class="location__title" id="location-title">
+                Donde la historia<br />
+                <em>toma lugar.</em>
+              </h2>
+            </div>
+          </header>
 
-      <span class="location__number">10</span>
+          <!-- Main -->
+          <div class="location__main">
+            <!-- Visual -->
+            <div class="location__visual">
+              <img
+                src="https://irp.cdn-website.com/e695e09a/dms3rep/multi/opt/Hotel_urajan_de_luna-Durango+%282%29-2304w.jpg"
+                alt="Uraján de Luna Hotel & Spa en Nombre de Dios, Durango"
+                loading="lazy"
+              />
 
-      <div>
-        <p class="eyebrow location__eyebrow">
-          El lugar
-        </p>
-
-        <h2 class="location__title" id="location-title">
-          Donde la historia<br />
-          <em>toma lugar.</em>
-        </h2>
-      </div>
-
-    </header>
-
-
-    <!-- Main -->
-    <div class="location__main">
-
-      <!-- Visual -->
-      <div class="location__visual">
-
-        <img
-          src="https://irp.cdn-website.com/e695e09a/dms3rep/multi/opt/Hotel_urajan_de_luna-Durango+%282%29-2304w.jpg"
-          alt="Uraján de Luna Hotel & Spa en Nombre de Dios, Durango"
-          loading="lazy"
-        />
-
-        <span class="location__caption">
-          Nombre de Dios · Durango
-        </span>
-
-      </div>
-
-
-      <!-- Information -->
-      <div class="location__info">
-
-        <div>
-
-          <p class="location__info-label">
-            Sede
-          </p>
-
-          <h3 class="location__name">
-            Uraján de Luna<br />
-            <em>Hotel & Spa</em>
-          </h3>
-
-          <p class="location__description">
-            Un espacio que reúne naturaleza, arquitectura,
-            tradición y hospitalidad en Nombre de Dios,
-            Durango. Aquí comienza la experiencia de
-            La Tapada de Luna.
-          </p>
-
-
-          <!-- Details -->
-          <div class="location__details">
-
-            <div class="location__detail">
-
-              <span class="location__detail-label">
-                Lugar
-              </span>
-
-              <p class="location__detail-value">
-                Nombre de Dios, Durango
-              </p>
-
+              <span class="location__caption"> Nombre de Dios · Durango </span>
             </div>
 
+            <!-- Information -->
+            <div class="location__info">
+              <div>
+                <p class="location__info-label">Sede</p>
 
-            <div class="location__detail">
+                <h3 class="location__name">
+                  Uraján de Luna<br />
+                  <em>Hotel & Spa</em>
+                </h3>
 
-              <span class="location__detail-label">
-                Sede
-              </span>
+                <p class="location__description">
+                  Un espacio que reúne naturaleza, arquitectura, tradición y
+                  hospitalidad en Nombre de Dios, Durango. Aquí comienza la
+                  experiencia de La Tapada de Luna.
+                </p>
 
-              <p class="location__detail-value">
-                Uraján de Luna Hotel & Spa
-              </p>
+                <!-- Details -->
+                <div class="location__details">
+                  <div class="location__detail">
+                    <span class="location__detail-label"> Lugar </span>
 
+                    <p class="location__detail-value">
+                      Nombre de Dios, Durango
+                    </p>
+                  </div>
+
+                  <div class="location__detail">
+                    <span class="location__detail-label"> Sede </span>
+
+                    <p class="location__detail-value">
+                      Uraján de Luna Hotel & Spa
+                    </p>
+                  </div>
+
+                  <div class="location__detail">
+                    <span class="location__detail-label"> Fecha </span>
+
+                    <p class="location__detail-value">
+                      21 de noviembre de 2026
+                    </p>
+                  </div>
+
+                  <div class="location__detail">
+                    <span class="location__detail-label"> Inicio </span>
+
+                    <p class="location__detail-value">4:00 P. M.</p>
+                  </div>
+                </div>
+
+                <!-- Ritual -->
+                <div class="location__ritual">
+                  <div class="location__ritual-icon">
+                    <i class="ph ph-fire"></i>
+                  </div>
+
+                  <p class="location__ritual-text">
+                    <strong>El ritual sucede en</strong>
+                    Vinata Cuero Viejo
+                  </p>
+                </div>
+
+                <!-- Actions -->
+                <div class="location__actions">
+                  <a
+                    href="https://maps.app.goo.gl/qtVkGJPMqxd2NFdj8"
+                    class="button button--outline"
+                  >
+                    Ver ubicación
+                  </a>
+
+                  <p class="location__map-note">
+                    Mapa y acceso · Por confirmar
+                  </p>
+                </div>
+              </div>
             </div>
-
-
-            <div class="location__detail">
-
-              <span class="location__detail-label">
-                Fecha
-              </span>
-
-              <p class="location__detail-value">
-                21 de noviembre de 2026
-              </p>
-
-            </div>
-
-
-            <div class="location__detail">
-
-              <span class="location__detail-label">
-                Inicio
-              </span>
-
-              <p class="location__detail-value">
-                4:00 P. M.
-              </p>
-
-            </div>
-
           </div>
 
-
-          <!-- Ritual -->
-          <div class="location__ritual">
-
-            <div class="location__ritual-icon">
-              <i class="ph ph-fire"></i>
-            </div>
-
-            <p class="location__ritual-text">
-              <strong>El ritual sucede en</strong>
-              Vinata Cuero Viejo
-            </p>
-
-          </div>
-
-
-          <!-- Actions -->
-          <div class="location__actions">
-
-            <a
-              href="https://maps.app.goo.gl/qtVkGJPMqxd2NFdj8"
-              class="button button--outline"
-            >
-              Ver ubicación
-            </a>
-
-            <p class="location__map-note">
-              Mapa y acceso · Por confirmar
-            </p>
-
-          </div>
-
+          <!-- Decorative film -->
+          <div class="location__film" aria-hidden="true"></div>
         </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- Decorative film -->
-    <div
-      class="location__film"
-      aria-hidden="true"
-    ></div>
-
-  </div>
-
-</section>
+      </section>
 
       <!-- MEMORIES -->
-     <!-- =========================================
+      <!-- =========================================
      11 — RECUERDOS
      ========================================= -->
 
-<section class="memories" id="recuerdos" aria-labelledby="memories-title">
+      <section class="memories" id="recuerdos" aria-labelledby="memories-title">
+        <div class="memories__inner">
+          <!-- Header -->
+          <header class="memories__header">
+            <span class="memories__number">11</span>
 
-  <div class="memories__inner">
+            <div>
+              <p class="eyebrow memories__eyebrow">Recuerdos</p>
 
-    <!-- Header -->
-    <header class="memories__header">
+              <h2 class="memories__title" id="memories-title">
+                Algunas historias<br />
+                <em>se quedan contigo.</em>
+              </h2>
+            </div>
+          </header>
 
-      <span class="memories__number">11</span>
+          <!-- Intro -->
+          <div class="memories__intro">
+            <p class="memories__intro-text">
+              Una noche como esta no termina cuando se apagan las luces.
+              Permanece en las imágenes, en la mesa, en el territorio y en los
+              momentos que compartimos.
+            </p>
+          </div>
 
-      <div>
-        <p class="eyebrow memories__eyebrow">
-          Recuerdos
-        </p>
-
-        <h2 class="memories__title" id="memories-title">
-          Algunas historias<br />
-          <em>se quedan contigo.</em>
-        </h2>
-      </div>
-
-    </header>
-
-
-    <!-- Intro -->
-    <div class="memories__intro">
-
-      <p class="memories__intro-text">
-        Una noche como esta no termina cuando se apagan
-        las luces. Permanece en las imágenes, en la mesa,
-        en el territorio y en los momentos que compartimos.
-      </p>
-
-    </div>
-
-
-    <!-- Photo Archive -->
-   <div class="memories__archive">
-
-  <!-- =========================================
+          <!-- Photo Archive -->
+          <div class="memories__archive">
+            <!-- =========================================
        EDICIÓN 2024 — CARRUSEL
        ========================================= -->
 
-  <article class="memory-card memory-card--2024">
+            <article class="memory-card memory-card--2024">
+              <div class="memory-card__media">
+                <div class="memory-carousel" data-carousel>
+                  <div class="memory-carousel__track">
+                    <div class="memory-carousel__slide">
+                      <img
+                        src="./assets/img/Kit_Canva_La_Tapada_2026/agosto/DSC06292.jpg"
+                        alt="Edición 2024 de La Tapada de Luna"
+                        loading="lazy"
+                      />
+                    </div>
 
-    <div class="memory-card__media">
+                    <div class="memory-carousel__slide">
+                      <img
+                        src="./assets/img/Kit_Canva_La_Tapada_2026/agosto/DSC06603.jpg"
+                        alt="Edición 2024 de La Tapada de Luna"
+                        loading="lazy"
+                      />
+                    </div>
 
-      <div class="memory-carousel" data-carousel>
+                    <div class="memory-carousel__slide">
+                      <img
+                        src="./assets/img/Kit_Canva_La_Tapada_2026/agosto/DSC06773.jpg"
+                        alt="Edición 2024 de La Tapada de Luna"
+                        loading="lazy"
+                      />
+                    </div>
+                     <div class="memory-carousel__slide">
+                      <img
+                        src="./assets/img/Kit_Canva_La_Tapada_2026/agosto/DSC06732.jpg"
+                        alt="Edición 2024 de La Tapada de Luna"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-        <div class="memory-carousel__track">
+                  <button
+                    class="memory-carousel__arrow memory-carousel__arrow--prev"
+                    type="button"
+                    aria-label="Imagen anterior"
+                  >
+                    <i class="ph ph-arrow-left"></i>
+                  </button>
 
-          <div class="memory-carousel__slide">
-            <img
-              src="URL_2024_01"
-              alt="Edición 2024 de La Tapada de Luna"
-              loading="lazy"
-            />
-          </div>
+                  <button
+                    class="memory-carousel__arrow memory-carousel__arrow--next"
+                    type="button"
+                    aria-label="Siguiente imagen"
+                  >
+                    <i class="ph ph-arrow-right"></i>
+                  </button>
 
-          <div class="memory-carousel__slide">
-            <img
-              src="URL_2024_02"
-              alt="Edición 2024 de La Tapada de Luna"
-              loading="lazy"
-            />
-          </div>
+                  <div class="memory-carousel__dots"></div>
+                </div>
+              </div>
 
-          <div class="memory-carousel__slide">
-            <img
-              src="URL_2024_03"
-              alt="Edición 2024 de La Tapada de Luna"
-              loading="lazy"
-            />
-          </div>
+              <div class="memory-card__footer">
+                <span class="memory-card__number">01</span>
 
-        </div>
+                <h3 class="memory-card__title">Edición 2024</h3>
+              </div>
+            </article>
 
-        <button
-          class="memory-carousel__arrow memory-carousel__arrow--prev"
-          type="button"
-          aria-label="Imagen anterior"
-        >
-          <i class="ph ph-arrow-left"></i>
-        </button>
-
-        <button
-          class="memory-carousel__arrow memory-carousel__arrow--next"
-          type="button"
-          aria-label="Siguiente imagen"
-        >
-          <i class="ph ph-arrow-right"></i>
-        </button>
-
-        <div class="memory-carousel__dots"></div>
-
-      </div>
-
-    </div>
-
-    <div class="memory-card__footer">
-      <span class="memory-card__number">01</span>
-
-      <h3 class="memory-card__title">
-        Edición 2024
-      </h3>
-    </div>
-
-  </article>
-
-
-  <!-- =========================================
+            <!-- =========================================
        EDICIÓN 2025 — CARRUSEL
        ========================================= -->
 
-  <article class="memory-card memory-card--2025">
+            <article class="memory-card memory-card--2025">
+              <div class="memory-card__media">
+                <div class="memory-carousel" data-carousel>
+                  <div class="memory-carousel__track">
+                    <div class="memory-carousel__slide">
+                      <img
+                        src="./assets/img/Kit_Canva_La_Tapada_2026/nov25/DSC06680.jpg"
+                        alt="Edición 2025 de La Tapada de Luna"
+                        loading="lazy"
+                      />
+                    </div>
 
-    <div class="memory-card__media">
+                    <div class="memory-carousel__slide">
+                      <img
+                        src="./assets/img/Kit_Canva_La_Tapada_2026/nov25/DSC06751.jpg"
+                        alt="Edición 2025 de La Tapada de Luna"
+                        loading="lazy"
+                      />
+                    </div>
 
-      <div class="memory-carousel" data-carousel>
+                    <div class="memory-carousel__slide">
+                      <img
+                        src="./assets/img/Kit_Canva_La_Tapada_2026/nov25/DSC06937.jpg"
+                        alt="Edición 2025 de La Tapada de Luna"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="memory-carousel__slide">
+                      <img
+                        src="./assets/img/Kit_Canva_La_Tapada_2026/nov25/DSC06966.jpg"
+                        alt="Edición 2025 de La Tapada de Luna"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
 
-        <div class="memory-carousel__track">
+                  <button
+                    class="memory-carousel__arrow memory-carousel__arrow--prev"
+                    type="button"
+                    aria-label="Imagen anterior"
+                  >
+                    <i class="ph ph-arrow-left"></i>
+                  </button>
 
-          <div class="memory-carousel__slide">
-            <img
-              src="./assets/img/Kit_Canva_La_Tapada_2026/nov25/DSC06680.jpg"
-              alt="Edición 2025 de La Tapada de Luna"
-              loading="lazy"
-            />
-          </div>
+                  <button
+                    class="memory-carousel__arrow memory-carousel__arrow--next"
+                    type="button"
+                    aria-label="Siguiente imagen"
+                  >
+                    <i class="ph ph-arrow-right"></i>
+                  </button>
 
-          <div class="memory-carousel__slide">
-            <img
-              src="./assets/img/Kit_Canva_La_Tapada_2026/nov25/DSC06751.jpg"
-              alt="Edición 2025 de La Tapada de Luna"
-              loading="lazy"
-            />
-          </div>
+                  <div class="memory-carousel__dots"></div>
+                </div>
+              </div>
 
-          <div class="memory-carousel__slide">
-            <img
-              src="./assets/img/Kit_Canva_La_Tapada_2026/nov25/DSC06937.jpg"
-              alt="Edición 2025 de La Tapada de Luna"
-              loading="lazy"
-            />
-          </div>
-          <div class="memory-carousel__slide">
-            <img
-              src="./assets/img/Kit_Canva_La_Tapada_2026/nov25/DSC06966.jpg"
-              alt="Edición 2025 de La Tapada de Luna"
-              loading="lazy"
-            />
-          </div>
+              <div class="memory-card__footer">
+                <span class="memory-card__number">02</span>
 
-        </div>
+                <h3 class="memory-card__title">Edición 2025</h3>
+              </div>
+            </article>
 
-        <button
-          class="memory-carousel__arrow memory-carousel__arrow--prev"
-          type="button"
-          aria-label="Imagen anterior"
-        >
-          <i class="ph ph-arrow-left"></i>
-        </button>
-
-        <button
-          class="memory-carousel__arrow memory-carousel__arrow--next"
-          type="button"
-          aria-label="Siguiente imagen"
-        >
-          <i class="ph ph-arrow-right"></i>
-        </button>
-
-        <div class="memory-carousel__dots"></div>
-
-      </div>
-
-    </div>
-
-    <div class="memory-card__footer">
-      <span class="memory-card__number">02</span>
-
-      <h3 class="memory-card__title">
-        Edición 2025
-      </h3>
-    </div>
-
-  </article>
-
-
-  <!-- =========================================
+            <!-- =========================================
        VIDEO RECAP
        ========================================= -->
 
-  <article class="memory-card memory-card--video">
+            <article class="memory-card memory-card--video">
+              <div class="memory-card__media memory-card__media--video">
+                <video
+                  class="memory-card__video"
+                  poster="URL_POSTER_RECAP"
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                >
+                  <source src="URL_VIDEO_RECAP" type="video/mp4" />
+                </video>
 
-    <div class="memory-card__media memory-card__media--video">
+                <button
+                  class="memory-video__play"
+                  type="button"
+                  aria-label="Reproducir video recap"
+                >
+                  <i class="ph ph-play"></i>
+                </button>
+              </div>
 
-      <video
-        class="memory-card__video"
-        poster="URL_POSTER_RECAP"
-        muted
-        loop
-        playsinline
-        preload="metadata"
-      >
-        <source
-          src="URL_VIDEO_RECAP"
-          type="video/mp4"
-        />
-      </video>
+              <div class="memory-card__footer">
+                <span class="memory-card__number">03</span>
 
-      <button
-        class="memory-video__play"
-        type="button"
-        aria-label="Reproducir video recap"
-      >
-        <i class="ph ph-play"></i>
-      </button>
+                <h3 class="memory-card__title">Video Recap</h3>
+              </div>
+            </article>
+          </div>
 
-    </div>
+          <!-- Film strip -->
+          <div class="memories__film" aria-hidden="true">
+            <div class="memories__film-track">
+              <span class="memories__film-item">
+                Una historia que se vive
+              </span>
 
-    <div class="memory-card__footer">
-      <span class="memory-card__number">03</span>
+              <span class="memories__film-item"> Agave y Encuadre </span>
 
-      <h3 class="memory-card__title">
-        Video Recap
-      </h3>
-    </div>
+              <span class="memories__film-item"> La Tapada de Luna </span>
 
-  </article>
+              <span class="memories__film-item"> Edición 2026 </span>
 
-</div>
+              <span class="memories__film-item">
+                Una historia que se vive
+              </span>
 
+              <span class="memories__film-item"> Agave y Encuadre </span>
 
-    <!-- Film strip -->
-    <div class="memories__film" aria-hidden="true">
+              <span class="memories__film-item"> La Tapada de Luna </span>
 
-      <div class="memories__film-track">
+              <span class="memories__film-item"> Edición 2026 </span>
+            </div>
+          </div>
+        </div>
 
-        <span class="memories__film-item">
-          Una historia que se vive
-        </span>
-
-        <span class="memories__film-item">
-          Agave y Encuadre
-        </span>
-
-        <span class="memories__film-item">
-          La Tapada de Luna
-        </span>
-
-        <span class="memories__film-item">
-          Edición 2026
-        </span>
-
-        <span class="memories__film-item">
-          Una historia que se vive
-        </span>
-
-        <span class="memories__film-item">
-          Agave y Encuadre
-        </span>
-
-        <span class="memories__film-item">
-          La Tapada de Luna
-        </span>
-
-        <span class="memories__film-item">
-          Edición 2026
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="memories__grain" aria-hidden="true"></div>
-
-</section>
+        <div class="memories__grain" aria-hidden="true"></div>
+      </section>
       <!-- MARTHA -->
       <section class="section" id="martha"></section>
 

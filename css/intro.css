@@ -1,11 +1,10 @@
 /* =========================================================
    INTRO THIN
-   LA TAPADA DE LUNA · AGAVE Y ENCUADRE 2026
    ========================================================= */
 
 .intro-thin {
   position: relative;
-  min-height: 205px;
+  min-height: 270px;
   overflow: hidden;
 
   background: var(--color-agave);
@@ -23,18 +22,16 @@
 .intro-thin__bg {
   position: absolute;
   inset: 0;
+
   pointer-events: none;
   overflow: hidden;
 }
-
-
-/* Grain / textura */
 
 .intro-thin__texture {
   position: absolute;
   inset: 0;
 
-  opacity: 0.16;
+  opacity: 0.15;
 
   background-image:
     url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
@@ -43,159 +40,57 @@
 }
 
 
-/* Líneas editoriales */
-
-.intro-thin__line {
-  position: absolute;
-  height: 1px;
-
-  background: rgba(245, 241, 234, 0.14);
-}
-
-.intro-thin__line--1 {
-  width: 220px;
-  top: 28px;
-  left: 4%;
-}
-
-.intro-thin__line--2 {
-  width: 140px;
-  right: 14%;
-  bottom: 32px;
-  transform: rotate(-90deg);
-}
-
-.intro-thin__line--3 {
-  width: 320px;
-  right: -80px;
-  top: 50%;
-  transform: rotate(-22deg);
-}
-
-
-/* Círculos */
-
-.intro-thin__circle {
-  position: absolute;
-
-  border: 1px solid rgba(245, 241, 234, 0.15);
-  border-radius: 50%;
-}
-
-.intro-thin__circle--1 {
-  width: 120px;
-  height: 120px;
-
-  left: 8%;
-  top: -72px;
-}
-
-.intro-thin__circle--2 {
-  width: 190px;
-  height: 190px;
-
-  right: 2%;
-  bottom: -135px;
-}
-
-.intro-thin__circle--3 {
-  width: 44px;
-  height: 44px;
-
-  right: 27%;
-  top: 25px;
-
-  border-color: rgba(159, 108, 52, 0.55);
-}
-
-
-/* Cruces */
-
-.intro-thin__cross {
-  position: absolute;
-
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 300;
-
-  color: rgba(207, 185, 158, 0.55);
-}
-
-.intro-thin__cross--1 {
-  left: 24%;
-  top: 22px;
-}
-
-.intro-thin__cross--2 {
-  right: 36%;
-  bottom: 24px;
-}
-
-.intro-thin__cross--3 {
-  right: 7%;
-  top: 24px;
-}
-
-
-/* Año gigante */
-
 .intro-thin__edition-mark {
   position: absolute;
 
-  right: 4%;
-  bottom: -48px;
+  right: 3%;
+  bottom: -70px;
 
   font-family: var(--font-display);
-  font-size: 180px;
+  font-size: 240px;
   line-height: 1;
 
-  color: rgba(245, 241, 234, 0.055);
+  color: rgba(245, 241, 234, 0.045);
 }
 
-
-/* Coordenadas */
 
 .intro-thin__coordinates {
   position: absolute;
 
   left: 4%;
-  bottom: 22px;
+  bottom: 18px;
 
   font-family: var(--font-body);
-  font-size: 7px;
+  font-size: 8px;
   letter-spacing: 0.22em;
 
-  color: rgba(245, 241, 234, 0.32);
+  color: rgba(245, 241, 234, 0.3);
 }
 
 
-/* Sello */
-
-.intro-thin__stamp {
+.intro-thin__cross {
   position: absolute;
 
-  right: 8%;
-  top: 20px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  width: 74px;
-  height: 74px;
-
-  border: 1px solid rgba(245, 241, 234, 0.25);
-  border-radius: 50%;
-
-  transform: rotate(-10deg);
-
   font-family: var(--font-body);
-  font-size: 6px;
-  line-height: 1.5;
-  letter-spacing: 0.16em;
+  font-size: 18px;
+  font-weight: 300;
 
-  color: rgba(245, 241, 234, 0.42);
+  color: rgba(207, 185, 158, 0.5);
+}
+
+.intro-thin__cross--1 {
+  left: 20%;
+  top: 28px;
+}
+
+.intro-thin__cross--2 {
+  right: 30%;
+  bottom: 25px;
+}
+
+.intro-thin__cross--3 {
+  right: 5%;
+  top: 30px;
 }
 
 
@@ -210,93 +105,56 @@
   display: grid;
 
   grid-template-columns:
-    auto
-    auto
-    1px
-    minmax(300px, 1fr)
-    auto
-    auto;
+    170px
+    150px
+    minmax(420px, 1fr)
+    150px
+    230px
+    120px;
 
   align-items: center;
 
-  min-height: 205px;
+  min-height: 270px;
 
   padding: 38px var(--container-padding);
 
-  gap: 28px;
-}
-
-
-/* Línea decorativa izquierda */
-
-.intro-thin__inner::before {
-  content: "";
-
-  position: absolute;
-
-  left: var(--container-padding);
-  top: 17px;
-
-  width: 45px;
-  height: 1px;
-
-  background: var(--color-copper);
-
-  opacity: 0.8;
-}
-
-
-/* Código editorial */
-
-.intro-thin__inner::after {
-  content: "LTL · 26";
-
-  position: absolute;
-
-  right: var(--container-padding);
-  top: 16px;
-
-  font-family: var(--font-body);
-  font-size: 7px;
-  letter-spacing: 0.18em;
-
-  color: rgba(245, 241, 234, 0.35);
+  gap: 22px;
 }
 
 
 /* =========================================================
-   NUMBER
+   SECTION INFO
    ========================================================= */
 
-.intro-thin__number {
-  align-self: start;
+.intro-thin__section {
+  display: flex;
+  align-items: flex-start;
 
-  padding-top: 3px;
+  gap: 18px;
+}
+
+.intro-thin__number {
+  padding-top: 5px;
 
   font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 13px;
   letter-spacing: 0.12em;
 
   color: var(--color-sand);
 }
 
-
-/* =========================================================
-   LABEL
-   ========================================================= */
-
-.intro-thin__label {
+.intro-thin__section-info {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+
+  gap: 8px;
 }
 
 .intro-thin__eyebrow {
   font-family: var(--font-body);
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 
   color: var(--color-paper);
@@ -304,23 +162,80 @@
 
 .intro-thin__edition {
   font-family: var(--font-body);
-  font-size: 7px;
-  letter-spacing: 0.12em;
+  font-size: 10px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 
-  color: rgba(245, 241, 234, 0.55);
+  color: rgba(245, 241, 234, 0.6);
 }
 
 
 /* =========================================================
-   DIVIDER
+   AGAVE IMAGE
    ========================================================= */
 
-.intro-thin__divider {
-  width: 1px;
-  height: 74px;
+.intro-thin__image {
+  position: relative;
 
-  background: rgba(245, 241, 234, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 200px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(245, 241, 234, 0.28);
+}
+
+.intro-thin__image::before {
+  content: "";
+
+  position: absolute;
+  inset: 8px;
+
+  border: 1px solid rgba(245, 241, 234, 0.16);
+
+  z-index: 2;
+}
+
+.intro-thin__image::after {
+  content: "BOTANICAL / 01";
+
+  position: absolute;
+
+  left: 12px;
+  bottom: 10px;
+
+  z-index: 3;
+
+  font-family: var(--font-body);
+  font-size: 7px;
+  letter-spacing: 0.16em;
+
+  color: rgba(245, 241, 234, 0.65);
+}
+
+.intro-thin__image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter:
+    brightness(0.7)
+    contrast(1.1);
+
+  opacity: 0.8;
+
+  transform: scale(1.2);
+
+  transition: transform 600ms ease;
+}
+
+.intro-thin__image:hover img {
+  transform: scale(1.28);
 }
 
 
@@ -330,83 +245,161 @@
 
 .intro-thin__message {
   position: relative;
+
+  padding-left: 10px;
 }
 
 .intro-thin__small-title {
   display: block;
-  margin-bottom: 4px;
+
+  margin-bottom: 12px;
 
   font-family: var(--font-body);
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
 
-  color: rgba(245, 241, 234, 0.58);
+  color: rgba(245, 241, 234, 0.65);
 }
 
 .intro-thin__message h2 {
   margin: 0;
 
   font-family: var(--font-display);
-  font-size: clamp(32px, 3vw, 48px);
+  font-size: clamp(58px, 5vw, 82px);
   font-weight: 400;
-  line-height: 0.9;
-  letter-spacing: -0.02em;
+
+  line-height: 0.78;
+  letter-spacing: -0.035em;
 
   color: var(--color-paper);
 }
 
+.intro-thin__message h2 em {
+  color: var(--color-sand);
+}
+
 .intro-thin__message p {
-  margin: 7px 0 0;
+  margin: 18px 0 0;
 
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 25px;
   font-style: italic;
-  line-height: 1;
 
   color: var(--color-sand);
 }
 
 
-/* Mini film strip */
+/* =========================================================
+   FILM FRAME
+   ========================================================= */
 
-.intro-thin__message::after {
+.intro-thin__film-frame {
+  position: relative;
+
+  width: 150px;
+  height: 200px;
+
+  padding: 12px;
+
+  border: 1px solid rgba(245, 241, 234, 0.3);
+
+  background: rgba(20, 20, 20, 0.12);
+}
+
+.intro-thin__film-frame::before,
+.intro-thin__film-frame::after {
   content: "";
 
-  display: block;
+  position: absolute;
 
-  width: 115px;
-  height: 18px;
+  left: -5px;
+  right: -5px;
 
-  margin-top: 9px;
-
-  border-top: 1px solid rgba(245, 241, 234, 0.28);
-  border-bottom: 1px solid rgba(245, 241, 234, 0.28);
+  height: 8px;
 
   background:
     repeating-linear-gradient(
       90deg,
-      transparent 0 13px,
-      rgba(245, 241, 234, 0.18) 13px 17px,
-      transparent 17px 30px
+      transparent 0 10px,
+      rgba(245, 241, 234, 0.3) 10px 16px,
+      transparent 16px 25px
     );
+}
 
-  opacity: 0.55;
+.intro-thin__film-frame::before {
+  top: 5px;
+}
+
+.intro-thin__film-frame::after {
+  bottom: 5px;
+}
+
+.intro-thin__film-image {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: var(--color-film-black);
+}
+
+.intro-thin__film-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%) contrast(1.15);
+
+  opacity: 0.72;
+
+  transform: scale(1.15);
+}
+
+.intro-thin__film-label {
+  position: absolute;
+
+  top: 19px;
+  left: 20px;
+
+  z-index: 3;
+
+  font-family: var(--font-body);
+  font-size: 6px;
+  letter-spacing: 0.16em;
+
+  color: rgba(245, 241, 234, 0.7);
+}
+
+.intro-thin__film-number {
+  position: absolute;
+
+  right: 18px;
+  bottom: 18px;
+
+  z-index: 3;
+
+  font-family: var(--font-body);
+  font-size: 8px;
+  letter-spacing: 0.15em;
+
+  color: rgba(245, 241, 234, 0.65);
 }
 
 
 /* =========================================================
-   ICONOGRAPHY
+   ICONS
    ========================================================= */
 
 .intro-thin__icons {
   display: grid;
 
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
 
-  gap: 13px 20px;
+  gap: 20px 16px;
 
-  padding-left: 22px;
+  padding-left: 20px;
 
   border-left: 1px solid rgba(245, 241, 234, 0.25);
 }
@@ -415,174 +408,70 @@
   display: flex;
   align-items: center;
 
-  gap: 7px;
+  gap: 8px;
 }
 
 .intro-thin__icon i {
-  font-size: 17px;
+  font-size: 22px;
 
   color: var(--color-sand);
 
   transition:
-    transform var(--transition-fast),
-    color var(--transition-fast);
+    transform 250ms ease,
+    color 250ms ease;
 }
 
 .intro-thin__icon span {
   font-family: var(--font-body);
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 
-  color: rgba(245, 241, 234, 0.72);
+  color: rgba(245, 241, 234, 0.8);
 }
 
 .intro-thin__icon:hover i {
   color: var(--color-paper);
 
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 
 /* =========================================================
-   AGAVE
+   SIGNATURE
    ========================================================= */
 
-.intro-thin__agave {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 105px;
-  height: 105px;
-}
-
-.intro-thin__agave img {
-  position: relative;
-  z-index: 2;
-
-  width: 105px;
-  height: 105px;
-
-  object-fit: contain;
-
-  opacity: 0.82;
-
-  filter: brightness(0) invert(1);
-
-  transition:
-    transform var(--transition-base),
-    opacity var(--transition-base);
-}
-
-.intro-thin__agave:hover img {
-  opacity: 1;
-
-  transform: rotate(-4deg) scale(1.04);
-}
-
-
-/* Círculo */
-
-.intro-thin__agave-circle {
-  position: absolute;
-  inset: 7px;
-
-  border: 1px solid rgba(207, 185, 158, 0.35);
-  border-radius: 50%;
-}
-
-
-/* Línea decorativa */
-
-.intro-thin__agave::before {
-  content: "";
-
-  position: absolute;
-
-  width: 130px;
-  height: 1px;
-
-  background: rgba(207, 185, 158, 0.35);
-
-  transform: rotate(-35deg);
-}
-
-
-/* Estrella */
-
-.intro-thin__agave::after {
-  content: "✦";
-
-  position: absolute;
-
-  right: -14px;
-  top: 5px;
-
-  font-size: 10px;
-
-  color: var(--color-copper);
-}
-
-
-/* Label */
-
-.intro-thin__agave-label {
-  position: absolute;
-
-  z-index: 3;
-
-  bottom: 5px;
-
-  font-family: var(--font-body);
-  font-size: 6px;
-  letter-spacing: 0.22em;
-
-  color: var(--color-paper);
-}
-
-
-/* =========================================================
-   LA TAPADA
-   ========================================================= */
-
-.intro-thin__tapada {
-  align-self: end;
-
+.intro-thin__signature {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
-  gap: 3px;
-
-  padding-bottom: 2px;
+  gap: 5px;
 }
 
-.intro-thin__tapada-line {
-  width: 42px;
+.intro-thin__signature-line {
+  width: 55px;
   height: 1px;
 
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 
   background: var(--color-copper);
 }
 
-.intro-thin__tapada-text {
+.intro-thin__signature-name {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 25px;
   font-style: italic;
 
   color: var(--color-paper);
 }
 
-.intro-thin__tapada-year {
+.intro-thin__signature-year {
   font-family: var(--font-body);
-  font-size: 7px;
-  letter-spacing: 0.2em;
+  font-size: 9px;
+  letter-spacing: 0.22em;
 
-  color: rgba(245, 241, 234, 0.55);
+  color: rgba(245, 241, 234, 0.6);
 }
 
 
@@ -590,31 +479,70 @@
    TABLET
    ========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
 
   .intro-thin__inner {
     grid-template-columns:
-      auto
-      auto
-      1px
-      minmax(250px, 1fr)
-      auto;
+      150px
+      120px
+      minmax(320px, 1fr)
+      120px
+      190px;
 
-    gap: 20px;
+    gap: 18px;
+  }
+
+  .intro-thin__signature {
+    display: none;
+  }
+
+  .intro-thin__message h2 {
+    font-size: 62px;
+  }
+
+  .intro-thin__image,
+  .intro-thin__film-frame {
+    width: 120px;
+    height: 175px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET PEQUEÑA
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .intro-thin {
+    min-height: 240px;
+  }
+
+  .intro-thin__inner {
+    min-height: 240px;
+
+    grid-template-columns:
+      140px
+      100px
+      minmax(280px, 1fr)
+      110px;
+
+    gap: 16px;
   }
 
   .intro-thin__icons {
     display: none;
   }
 
-  .intro-thin__agave {
-    width: 90px;
-    height: 90px;
+  .intro-thin__message h2 {
+    font-size: 58px;
   }
 
-  .intro-thin__agave img {
-    width: 90px;
-    height: 90px;
+  .intro-thin__image,
+  .intro-thin__film-frame {
+    width: 100px;
+    height: 155px;
   }
 
 }
@@ -633,108 +561,131 @@
   .intro-thin__inner {
     display: grid;
 
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr 100px;
 
-    min-height: 185px;
+    min-height: 0;
 
-    padding: 32px 24px;
+    padding: 35px 24px;
 
-    gap: 16px;
+    gap: 22px;
   }
 
 
+  /* Info */
+
+  .intro-thin__section {
+    grid-column: 1 / -1;
+
+    gap: 14px;
+  }
+
   .intro-thin__number {
+    font-size: 11px;
+  }
+
+  .intro-thin__eyebrow {
+    font-size: 12px;
+  }
+
+  .intro-thin__edition {
     font-size: 9px;
   }
 
 
-  .intro-thin__label {
-    align-self: start;
-  }
-
-
-  .intro-thin__divider {
-    display: none;
-  }
-
+  /* Mensaje */
 
   .intro-thin__message {
     grid-column: 1 / -1;
 
-    padding-top: 10px;
+    padding: 20px 0;
 
     border-top: 1px solid rgba(245, 241, 234, 0.2);
+    border-bottom: 1px solid rgba(245, 241, 234, 0.2);
+  }
+
+  .intro-thin__small-title {
+    font-size: 9px;
   }
 
   .intro-thin__message h2 {
-    font-size: 38px;
+    font-size: 55px;
+    line-height: 0.8;
+  }
+
+  .intro-thin__message p {
+    font-size: 19px;
+    margin-top: 15px;
   }
 
 
-  .intro-thin__message::after {
-    margin-top: 8px;
+  /* Imagen */
+
+  .intro-thin__image {
+    width: 100px;
+    height: 145px;
   }
 
 
-  .intro-thin__agave {
-    width: 62px;
-    height: 62px;
+  /* Film */
 
-    justify-self: end;
-  }
-
-  .intro-thin__agave img {
-    width: 62px;
-    height: 62px;
-  }
-
-  .intro-thin__agave-circle {
-    inset: 3px;
-  }
-
-  .intro-thin__agave-label {
-    display: none;
+  .intro-thin__film-frame {
+    width: 100px;
+    height: 145px;
   }
 
 
-  .intro-thin__tapada {
-    display: none;
+  /* Ocultar algunos elementos */
+
+  .intro-thin__icons {
+    display: grid;
+
+    grid-column: 1 / -1;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 18px 0 0;
+
+    border-left: none;
+    border-top: 1px solid rgba(245, 241, 234, 0.2);
   }
 
+  .intro-thin__icon {
+    justify-content: center;
+  }
+
+  .intro-thin__icon i {
+    font-size: 18px;
+  }
+
+  .intro-thin__icon span {
+    font-size: 7px;
+  }
+
+
+  /* Firma */
+
+  .intro-thin__signature {
+    display: flex;
+
+    grid-column: 1 / -1;
+
+    align-items: flex-start;
+
+    padding-top: 5px;
+  }
+
+
+  /* Decoración */
+
+  .intro-thin__edition-mark {
+    font-size: 150px;
+    right: -20px;
+    bottom: -40px;
+  }
 
   .intro-thin__coordinates {
     left: 24px;
     bottom: 14px;
-
-    font-size: 6px;
-  }
-
-
-  .intro-thin__edition-mark {
-    right: -15px;
-    bottom: -30px;
-
-    font-size: 120px;
-  }
-
-
-  .intro-thin__stamp {
-    width: 58px;
-    height: 58px;
-
-    right: 20px;
-    top: 18px;
-
-    font-size: 5px;
-  }
-
-
-  .intro-thin__inner::before {
-    left: 24px;
-  }
-
-  .intro-thin__inner::after {
-    right: 24px;
   }
 
 }
@@ -747,27 +698,41 @@
 @media (max-width: 480px) {
 
   .intro-thin__inner {
-    padding: 28px 20px;
+    padding: 30px 20px;
   }
 
   .intro-thin__message h2 {
-    font-size: 34px;
+    font-size: 48px;
   }
 
   .intro-thin__message p {
-    font-size: 15px;
+    font-size: 18px;
+  }
+
+  .intro-thin__image,
+  .intro-thin__film-frame {
+    width: 88px;
+    height: 130px;
+  }
+
+  .intro-thin__icons {
+    gap: 16px 8px;
+  }
+
+  .intro-thin__icon {
+    gap: 5px;
+  }
+
+  .intro-thin__icon i {
+    font-size: 16px;
+  }
+
+  .intro-thin__icon span {
+    font-size: 6px;
   }
 
   .intro-thin__coordinates {
     left: 20px;
-  }
-
-  .intro-thin__inner::before {
-    left: 20px;
-  }
-
-  .intro-thin__inner::after {
-    right: 20px;
   }
 
 }
