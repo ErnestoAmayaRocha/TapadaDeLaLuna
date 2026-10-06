@@ -170,6 +170,7 @@
 
 .tickets__price-block {
   position: relative;
+  text-align: center;
 }
 
 .tickets__phase {
@@ -645,7 +646,7 @@
   }
 
   .tickets__title {
-    font-size: clamp(52px, 15vw, 76px);
+    font-size: clamp(52px, 11vw, 76px);
   }
 
   .tickets__price {
@@ -667,11 +668,11 @@
   gap: 60px;
 }
 
-.tickets__header-title {
+/* .tickets__header-title {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-}
+} */
 
 .tickets__logos {
   display: flex;

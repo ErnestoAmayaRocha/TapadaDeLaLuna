@@ -367,7 +367,7 @@
   }
 
   .creators__title {
-    font-size: clamp(58px, 17vw, 84px);
+    font-size: clamp(58px, 10vw, 84px);
   }
 
   .creators__content {
@@ -384,7 +384,7 @@
   }
 
   .creators__projects {
-    grid-template-columns: 1fr;
+     grid-template-columns: repeat(2, 1fr);
   }
 
   .creators__project {
@@ -412,4 +412,108 @@
     opacity: 0.15;
   }
 
+}.tapada-convocatoria {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  width: 100%;
+  min-height: 58px;
+  padding: 16px 24px;
+
+  background: #a55f32;
+  border: 1px solid #c98252;
+  border-radius: 4px;
+
+  color: #fff8ed;
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+
+  box-shadow:
+    0 8px 24px rgba(165, 95, 50, .28);
+
+  overflow: hidden;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    box-shadow .3s ease;
+}
+
+/* Brillo que cruza el botón */
+.tapada-convocatoria::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.16),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  transition: left .6s ease;
+}
+
+.tapada-convocatoria span {
+  position: relative;
+  z-index: 2;
+}
+
+.tapada-convocatoria__arrow {
+  font-size: 17px;
+  line-height: 1;
+
+  transition:
+    transform .3s ease;
+}
+
+/* Hover */
+.tapada-convocatoria:hover {
+  background: #bd7040;
+  border-color: #d18b5b;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 32px rgba(165, 95, 50, .38);
+}
+
+.tapada-convocatoria:hover::before {
+  left: 140%;
+}
+
+.tapada-convocatoria:hover .tapada-convocatoria__arrow {
+  transform: translate(4px, -4px);
+}
+
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  .tapada-convocatoria {
+    width: 100%;
+    min-height: 60px;
+
+    padding: 17px 20px;
+
+    font-size: 10px;
+    letter-spacing: .12em;
+  }
+
+  .tapada-convocatoria__arrow {
+    font-size: 18px;
+  }
 }

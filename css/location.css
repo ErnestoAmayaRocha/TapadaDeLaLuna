@@ -390,7 +390,7 @@
   }
 
   .location__title {
-    font-size: clamp(58px, 17vw, 84px);
+    font-size: clamp(58px, 11vw, 84px);
   }
 
   .location__visual {
