@@ -11,7 +11,11 @@
     />
 
     <title>La Tapada de Luna · Agave y Encuadre 2026</title>
-
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/img/Kit_Canva_La_Tapada_2026/01_Logotipos/Emblema_papel.png"
+    />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +23,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Styles -->
@@ -37,6 +45,7 @@
     <link rel="stylesheet" href="css/aliados.css" />
     <link rel="stylesheet" href="css/faq.css" />
     <link rel="stylesheet" href="css/closing.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
 
   <body>
@@ -134,14 +143,25 @@
             <p class="hero__subtitle">Una noche de sabores, cine y mezcal.</p>
 
             <div class="hero__meta">
-              <span class="hero__meta-item"> 21 NOV 2026 </span>
+              <div class="hero__meta-date-time">
+                <span class="hero__meta-item">
+                  <i class="fa-regular fa-calendar"></i>
+                  21 NOV 2026
+                </span>
 
-              <span class="hero__meta-item"> 4:00 P. M. </span>
+                <span class="hero__meta-item">
+                  <i class="fa-regular fa-clock"></i>
+                  4:00 P. M.
+                </span>
+              </div>
 
-              <span class="hero__meta-item"> NOMBRE DE DIOS, DURANGO </span>
+              <span class="hero__meta-item hero__meta-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Vinata, Cuero Viejo Nombre de Dios, Durango.
+              </span>
             </div>
 
-            <div class="hero__price">
+            <div class="hero__price" style="text-align: center">
               <span class="hero__price-label"> Preventa fase 1 </span>
 
               <span class="hero__price-value"> $2,888 MXN </span>
@@ -175,13 +195,6 @@
               </div>
 
               <span class="hero__film-label"> La Tapada de Luna · 2026 </span>
-            </div>
-
-            <div class="hero__emblem" aria-hidden="true">
-              <img
-                src="./assets/img/Kit_Canva_La_Tapada_2026/02_Recursos/Agave_botanico.png"
-                alt="La Tapada de Luna"
-              />
             </div>
 
             <div class="hero__botanical" aria-hidden="true"></div>
@@ -309,16 +322,12 @@
         id="experiencia"
         aria-labelledby="experience-title"
       >
-        <!-- ==========================================
-       EXPERIENCE HEADER
-  =========================================== -->
-
         <div class="experience__header">
           <div class="experience__number">
             <span>04</span>
           </div>
 
-          <div>
+          <div class="experience__heading">
             <p class="eyebrow">La experiencia</p>
 
             <h2 class="experience__title" id="experience-title">
@@ -329,20 +338,17 @@
           </div>
         </div>
 
-        <!-- ==========================================
-       EXPERIENCE TIMELINE
-  =========================================== -->
-
         <div class="experience__timeline">
-          <!-- ========================================
-         SCENE 01
-    ========================================= -->
-
+          <!-- 01 -->
           <article class="scene">
-            <span class="scene__index"> 01 </span>
+            <div class="scene__number">01</div>
 
-            <div class="scene__content">
-              <time class="scene__time"> 4:00 P. M. </time>
+            <div class="scene__main">
+              <div class="scene__meta">
+                <span class="scene__time">4:00 P. M.</span>
+                <span class="scene__dot"></span>
+                <span class="scene__label">EL PRÓLOGO</span>
+              </div>
 
               <h3 class="scene__title">El prólogo</h3>
 
@@ -351,28 +357,19 @@
               </p>
             </div>
 
-            <div class="scene__visual">
-              <div class="scene__image">
-                <img
-                  src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/mesa-detalle.png"
-                  alt="Experiencia de bienvenida"
-                  loading="lazy"
-                />
-              </div>
-
-              <span class="scene__film-mark"> La Tapada · 01 </span>
-            </div>
+            <span class="scene__symbol">✦</span>
           </article>
 
-          <!-- ========================================
-         SCENE 02
-    ========================================= -->
-
+          <!-- 02 -->
           <article class="scene">
-            <span class="scene__index"> 02 </span>
+            <div class="scene__number">02</div>
 
-            <div class="scene__content">
-              <time class="scene__time"> 5:45 P. M. </time>
+            <div class="scene__main">
+              <div class="scene__meta">
+                <span class="scene__time">5:45 P. M.</span>
+                <span class="scene__dot"></span>
+                <span class="scene__label">EL FUEGO</span>
+              </div>
 
               <h3 class="scene__title">El fuego</h3>
 
@@ -381,28 +378,19 @@
               </p>
             </div>
 
-            <div class="scene__visual">
-              <div class="scene__image">
-                <img
-                  src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=1200&q=85"
-                  alt="Cena alrededor del fuego"
-                  loading="lazy"
-                />
-              </div>
-
-              <span class="scene__film-mark"> La Tapada · 02 </span>
-            </div>
+            <span class="scene__symbol">✦</span>
           </article>
 
-          <!-- ========================================
-         SCENE 03
-    ========================================= -->
-
+          <!-- 03 -->
           <article class="scene">
-            <span class="scene__index"> 03 </span>
+            <div class="scene__number">03</div>
 
-            <div class="scene__content">
-              <time class="scene__time"> 6:30 P. M. </time>
+            <div class="scene__main">
+              <div class="scene__meta">
+                <span class="scene__time">6:30 P. M.</span>
+                <span class="scene__dot"></span>
+                <span class="scene__label">MÚSICA</span>
+              </div>
 
               <h3 class="scene__title">Ajúa y olé</h3>
 
@@ -411,28 +399,19 @@
               </p>
             </div>
 
-            <div class="scene__visual">
-              <div class="scene__image">
-                <img
-                  src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/faritos3.jpg"
-                  alt="Música y celebración"
-                  loading="lazy"
-                />
-              </div>
-
-              <span class="scene__film-mark"> La Tapada · 03 </span>
-            </div>
+            <span class="scene__symbol">✦</span>
           </article>
 
-          <!-- ========================================
-         SCENE 04
-    ========================================= -->
-
+          <!-- 04 -->
           <article class="scene">
-            <span class="scene__index"> 04 </span>
+            <div class="scene__number">04</div>
 
-            <div class="scene__content">
-              <time class="scene__time"> 7:45 P. M. </time>
+            <div class="scene__main">
+              <div class="scene__meta">
+                <span class="scene__time">7:45 P. M.</span>
+                <span class="scene__dot"></span>
+                <span class="scene__label">TRADICIÓN</span>
+              </div>
 
               <h3 class="scene__title">El ritual</h3>
 
@@ -441,28 +420,19 @@
               </p>
             </div>
 
-            <div class="scene__visual">
-              <div class="scene__image">
-                <img
-                  src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/DSC06953.jpg"
-                  alt="Tradición y fuego"
-                  loading="lazy"
-                />
-              </div>
-
-              <span class="scene__film-mark"> La Tapada · 04 </span>
-            </div>
+            <span class="scene__symbol">✦</span>
           </article>
 
-          <!-- ========================================
-         SCENE 05
-    ========================================= -->
-
+          <!-- 05 -->
           <article class="scene">
-            <span class="scene__index"> 05 </span>
+            <div class="scene__number">05</div>
 
-            <div class="scene__content">
-              <time class="scene__time"> 8:30 P. M. </time>
+            <div class="scene__main">
+              <div class="scene__meta">
+                <span class="scene__time">8:30 P. M.</span>
+                <span class="scene__dot"></span>
+                <span class="scene__label">ARTE</span>
+              </div>
 
               <h3 class="scene__title">Movimiento</h3>
 
@@ -471,66 +441,54 @@
               </p>
             </div>
 
-            <div class="scene__visual">
-              <div class="scene__image">
-                <img
-                  src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/ReyMal-33.jpg"
-                  alt="Proyección cinematográfica"
-                  loading="lazy"
-                />
-              </div>
-
-              <span class="scene__film-mark"> La Tapada · 05 </span>
-            </div>
+            <span class="scene__symbol">✦</span>
           </article>
 
-          <!-- ========================================
-         SCENE 06
-    ========================================= -->
-
+          <!-- 06 -->
           <article class="scene">
-            <span class="scene__index"> 06 </span>
+            <div class="scene__number">06</div>
 
-            <div class="scene__content">
-              <time class="scene__time"> 9:30 P. M. </time>
+            <div class="scene__main">
+              <div class="scene__meta">
+                <span class="scene__time">9:30 P. M.</span>
+                <span class="scene__dot"></span>
+                <span class="scene__label">CELEBRACIÓN</span>
+              </div>
 
-              <h3 class="scene__title">
-                La noche
-                <br />
-                y sus luces
-              </h3>
+              <h3 class="scene__title">La noche y sus luces</h3>
 
               <p class="scene__description">
                 DJ Danny Khas. La música cambia el ritmo de la celebración.
               </p>
             </div>
 
-            <div class="scene__visual">
-              <div class="scene__image">
-                <img
-                  src="./assets/img/dj.jpg"
-                  alt="Celebración nocturna"
-                  loading="lazy"
-                />
-              </div>
-
-              <span class="scene__film-mark"> La Tapada · 06 </span>
-            </div>
+            <span class="scene__symbol">✦</span>
           </article>
 
-          <!-- ========================================
-         THE END
-    ========================================= -->
+          <!-- END -->
+          <div class="scene__end">
+            <span class="scene__end-line"></span>
 
-          <article class="scene scene--end">
-            <div class="scene__content">
-              <time class="scene__time"> 12:00 A. M. </time>
+            <span class="scene__end-text"> THE END </span>
 
-              <h3 class="scene__title">THE END</h3>
+            <span class="scene__end-time"> 12:00 A. M. </span>
 
-              <p class="scene__description">Una noche para recordar.</p>
+            <span class="scene__end-line"></span>
+          </div>
+          <div class="experience__image">
+            <img
+              src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/DSC06953.jpg"
+              alt="La Tapada — una noche de tradición, mezcal y encuentro"
+              loading="lazy"
+            />
+
+            <div class="experience__image-overlay"></div>
+
+            <div class="experience__image-caption">
+              <span>LA TAPADA · 2026</span>
+              <strong> Una noche para recordar. </strong>
             </div>
-          </article>
+          </div>
         </div>
       </section>
 
@@ -576,7 +534,7 @@
             </div>
 
             <a href="#boletos" class="button button--copper ritual__action">
-              Quiero vivir esta historia
+              Quiero comprar mis boletos en Ticket Max
             </a>
           </div>
 
@@ -609,6 +567,8 @@
           <div class="talent__list">
             <!-- LOS FARITOS -->
 
+            <!-- LOS FARITOS -->
+
             <article class="talent-item">
               <div class="talent-item__number">01</div>
 
@@ -621,17 +581,28 @@
                   Raíces y ritmo. Una presentación que cruza el norteño con el
                   flamenco.
                 </p>
+
+                <a
+                  href="https://www.instagram.com/USUARIO_FARITOS/"
+                  class="talent-item__instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver Instagram de Los Faritos"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                  <span>Instagram</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
 
               <div class="talent-item__visual">
-                <!-- IMAGEN TEMPORAL -->
                 <img
                   src="./assets/img/Kit_Canva_La_Tapada_2026/04_Fotografia_Referencia/faritos.jpg"
                   alt="Presentación musical"
                   loading="lazy"
                 />
 
-                <span class="talent-item__mark"> La Tapada · Música </span>
+                <span class="talent-item__mark">La Tapada · Música</span>
               </div>
             </article>
 
@@ -649,6 +620,17 @@
                   El ritmo que acompaña la transición hacia la noche y sus
                   luces.
                 </p>
+                <a
+                  href="https://www.instagram.com/USUARIO_DANNY/"
+                  class="talent-item__instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver Instagram de Danny Khas"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                  <span>Instagram</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
 
               <div class="talent-item__visual">
@@ -680,6 +662,17 @@
                   Imágenes que transforman el espacio y llevan a Durango a la
                   pantalla durante la noche.
                 </p>
+                <a
+                  href="https://www.instagram.com/USUARIO_REYMAL/"
+                  class="talent-item__instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver Instagram de Reymal Photography"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                  <span>Instagram</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
 
               <div class="talent-item__visual">
@@ -710,6 +703,17 @@
                   El talento gastronómico que dará forma a la experiencia
                   alrededor del fuego.
                 </p>
+                <a
+                  href="https://www.instagram.com/USUARIO_TEO/"
+                  class="talent-item__instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver Instagram de Teo Ríos"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                  <span>Instagram</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
               </div>
 
               <div class="talent-item__visual">
@@ -729,118 +733,134 @@
 
       <!-- INCLUDES -->
       <section class="includes" id="incluye" aria-labelledby="includes-label">
-        <div class="includes__inner">
-          <header class="includes__header">
-            <span class="includes__number"> 07 </span>
 
-            <p class="eyebrow includes__eyebrow" id="includes-label">
-              Tu acceso incluye
-            </p>
+  <div class="includes__inner">
 
-            <p class="includes__intro">
-              Una experiencia completa de mezcal, gastronomía, música y ritual.
-            </p>
-          </header>
+    <header class="includes__header">
 
-          <div class="includes__grid">
-            <article class="include-item">
-              <div class="include-item__icon">
-                <i class="ph ph-gift"></i>
-              </div>
+      <div class="includes__heading">
+        <span class="includes__number">07</span>
 
-              <div class="include-item__content">
-                <h3 class="include-item__name">Kit y cóctel</h3>
+        <p class="eyebrow includes__eyebrow" id="includes-label">
+          Tu acceso incluye
+        </p>
+      </div>
 
-                <p class="include-item__detail">Bienvenida</p>
-              </div>
-            </article>
+    </header>
 
-            <article class="include-item">
-              <div class="include-item__icon">
-                <i class="ph ph-wine"></i>
-              </div>
 
-              <div class="include-item__content">
-                <h3 class="include-item__name">Cata-maridaje</h3>
+    <div class="includes__grid">
 
-                <p class="include-item__detail">Mezcal</p>
-              </div>
-            </article>
-
-            <article class="include-item">
-              <div class="include-item__icon">
-                <i class="ph ph-fire"></i>
-              </div>
-
-              <div class="include-item__content">
-                <h3 class="include-item__name">Cena de asador</h3>
-
-                <p class="include-item__detail">Cuatro tiempos</p>
-              </div>
-            </article>
-
-            <article class="include-item">
-              <div class="include-item__icon">
-                <i class="ph ph-martini"></i>
-              </div>
-
-              <div class="include-item__content">
-                <h3 class="include-item__name">Bebidas</h3>
-
-                <p class="include-item__detail">4:00 · 9:30 P. M.</p>
-              </div>
-            </article>
-
-            <article class="include-item">
-              <div class="include-item__icon">
-                <i class="ph ph-plant"></i>
-              </div>
-
-              <div class="include-item__content">
-                <h3 class="include-item__name">La Tapada</h3>
-
-                <p class="include-item__detail">Ritual</p>
-              </div>
-            </article>
-
-            <article class="include-item">
-              <div class="include-item__icon">
-                <i class="ph ph-music-notes"></i>
-              </div>
-
-              <div class="include-item__content">
-                <h3 class="include-item__name">Los Faritos</h3>
-
-                <p class="include-item__detail">Música</p>
-              </div>
-            </article>
-
-            <article class="include-item">
-              <div class="include-item__icon">
-                <i class="ph ph-film-strip"></i>
-              </div>
-
-              <div class="include-item__content">
-                <h3 class="include-item__name">Proyecciones</h3>
-
-                <p class="include-item__detail">Reymal</p>
-              </div>
-            </article>
-
-            <article class="include-item">
-              <div class="include-item__icon">
-                <i class="ph ph-disc"></i>
-              </div>
-
-              <div class="include-item__content">
-                <h3 class="include-item__name">DJ Danny Khas</h3>
-
-                <p class="include-item__detail">Música · Noche</p>
-              </div>
-            </article>
-          </div>
+      <article class="include-item">
+        <div class="include-item__icon">
+          <i class="ph ph-gift"></i>
         </div>
-      </section>
+
+        <div class="include-item__content">
+          <h3 class="include-item__name">Kit y cóctel</h3>
+          <p class="include-item__detail">Bienvenida a la experiencia.</p>
+        </div>
+      </article>
+
+
+      <article class="include-item">
+        <div class="include-item__icon">
+          <i class="ph ph-wine"></i>
+        </div>
+
+        <div class="include-item__content">
+          <h3 class="include-item__name">Cata-maridaje</h3>
+          <p class="include-item__detail">Mezcal y productos regionales.</p>
+        </div>
+      </article>
+
+
+      <article class="include-item">
+        <div class="include-item__icon">
+          <i class="ph ph-fire"></i>
+        </div>
+
+        <div class="include-item__content">
+          <h3 class="include-item__name">Cena de asador</h3>
+          <p class="include-item__detail">Menú a cuatro tiempos.</p>
+        </div>
+      </article>
+
+
+      <article class="include-item">
+        <div class="include-item__icon">
+          <i class="ph ph-martini"></i>
+        </div>
+
+        <div class="include-item__content">
+          <h3 class="include-item__name">Bebidas</h3>
+          <p class="include-item__detail">De 4:00 a 9:30 p. m.</p>
+        </div>
+      </article>
+
+
+      <article class="include-item">
+        <div class="include-item__icon">
+          <i class="ph ph-plant"></i>
+        </div>
+
+        <div class="include-item__content">
+          <h3 class="include-item__name">La Tapada</h3>
+          <p class="include-item__detail">Experiencia del ritual.</p>
+        </div>
+      </article>
+
+
+      <article class="include-item">
+        <div class="include-item__icon">
+          <i class="ph ph-music-notes"></i>
+        </div>
+
+        <div class="include-item__content">
+          <h3 class="include-item__name">Los Faritos</h3>
+          <p class="include-item__detail">Música en vivo.</p>
+        </div>
+      </article>
+
+
+      <article class="include-item">
+        <div class="include-item__icon">
+          <i class="ph ph-film-strip"></i>
+        </div>
+
+        <div class="include-item__content">
+          <h3 class="include-item__name">Proyecciones</h3>
+          <p class="include-item__detail">Arte audiovisual.</p>
+        </div>
+      </article>
+
+
+      <article class="include-item">
+        <div class="include-item__icon">
+          <i class="ph ph-disc"></i>
+        </div>
+
+        <div class="include-item__content">
+          <h3 class="include-item__name">DJ Danny Khas</h3>
+          <p class="include-item__detail">Celebración nocturna.</p>
+        </div>
+      </article>
+
+    </div>
+<div class="includes__cta">
+  <a
+    href="TU_LINK_DE_TICKETMAX"
+    class="includes__button"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span>Comprar boletos en Ticket Max</span>
+    <span class="includes__button-arrow">↗</span>
+  </a>
+</div>
+  </div>
+
+</section>
 
       <!-- TICKETS -->
       <section class="tickets" id="boletos" aria-labelledby="tickets-title">
@@ -1476,8 +1496,6 @@
       <section class="allies" id="aliados" aria-labelledby="allies-title">
         <div class="allies__inner">
           <div class="allies__heading">
-            
-
             <div>
               <span class="allies__eyebrow"
                 >Quienes hacen posible esta historia</span
@@ -1542,8 +1560,6 @@
       <section class="faq" id="faq" aria-labelledby="faq-title">
         <div class="faq__inner">
           <header class="faq__header">
-          
-
             <h2 id="faq-title">Preguntas frecuentes</h2>
           </header>
 
@@ -1692,189 +1708,158 @@
         </div>
       </section>
 
-    <section class="closing" id="contacto" aria-labelledby="closing-title">
-
-  <!-- Elementos decorativos -->
-  <div class="closing__decor closing__decor--moon" aria-hidden="true">
-    <span></span>
-  </div>
-
-  <div class="closing__decor closing__decor--agave" aria-hidden="true">
-    <img
-      src="./assets/img/Kit_Canva_La_Tapada_2026/02_Recursos/Agave_botanico.png"
-      alt=""
-    />
-  </div>
-
-  <div class="closing__film" aria-hidden="true">
-    <span>01</span>
-    <span>26</span>
-    <span>DL</span>
-  </div>
-
-
-  <div class="closing__inner">
-
-    <!-- TOP -->
-    <div class="closing__top">
-     
-
-     
-
-      <span class="closing__top-line"></span>
-
-      <span class="closing__edition">
-        AGAVE Y ENCUADRE · 2026
-      </span>
-    </div>
-
-
-    <!-- CONTENT -->
-    <div class="closing__content">
-
-      <div class="closing__copy">
-
-        <p class="closing__eyebrow">
-          Una noche que se vive
-        </p>
-
-        <h2 id="closing-title">
-          Esta historia
-          <em>se vive.</em>
-        </h2>
-
-        <div class="closing__event">
-          <span>21 NOV 2026</span>
-          <i class="ph ph-circle"></i>
-          <span>4:00 P. M.</span>
-          <i class="ph ph-circle"></i>
-          <span>NOMBRE DE DIOS, DURANGO</span>
+      <section class="closing" id="contacto" aria-labelledby="closing-title">
+        <!-- Elementos decorativos -->
+        <div class="closing__decor closing__decor--moon" aria-hidden="true">
+          <span></span>
         </div>
 
-      </div>
+        <div class="closing__decor closing__decor--agave" aria-hidden="true">
+          <img
+            src="./assets/img/Kit_Canva_La_Tapada_2026/02_Recursos/Agave_botanico.png"
+            alt=""
+          />
+        </div>
 
+        <div class="closing__film" aria-hidden="true">
+          <span>01</span>
+          <span>26</span>
+          <span>DL</span>
+        </div>
 
-      <!-- BOTONES -->
-      <div class="closing__actions">
+        <div class="closing__inner">
+          <!-- TOP -->
+          <div class="closing__top">
+            <span class="closing__top-line"></span>
 
-        <a
-          href="URL_TICKETMAX"
-          class="closing__button closing__button--primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Comprar boletos</span>
-          <i class="ph ph-arrow-up-right"></i>
-        </a>
+            <span class="closing__edition"> AGAVE Y ENCUADRE · 2026 </span>
+          </div>
 
-        <a
-          href="#faq"
-          class="closing__button closing__button--secondary"
-        >
-          <span>Resolver mis dudas</span>
-          <i class="ph ph-arrow-up-right"></i>
-        </a>
+          <!-- CONTENT -->
+          <div class="closing__content">
+            <div class="closing__copy">
+              <p class="closing__eyebrow">Una noche que se vive</p>
 
-      </div>
+              <h2 id="closing-title">
+                Esta historia
+                <em>se vive.</em>
+              </h2>
 
-    </div>
+              <div class="closing__event">
+                <span>21 NOV 2026</span>
+                <i class="ph ph-circle"></i>
+                <span>4:00 P. M.</span>
+                <i class="ph ph-circle"></i>
+                <span>NOMBRE DE DIOS, DURANGO</span>
+              </div>
+            </div>
 
+            <!-- BOTONES -->
+            <div class="closing__actions">
+              <a
+                href="URL_TICKETMAX"
+                class="closing__button closing__button--primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Comprar boletos</span>
+                <i class="ph ph-arrow-up-right"></i>
+              </a>
 
-    <!-- CONTACTO -->
-    <div class="closing__contact">
+              <a href="#faq" class="closing__button closing__button--secondary">
+                <span>Resolver mis dudas</span>
+                <i class="ph ph-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
 
-      <div class="closing__contact-links">
+          <!-- CONTACTO -->
+          <div class="closing__contact">
+            <div class="closing__contact-links">
+              <a href="URL_WHATSAPP">
+                <i class="ph ph-whatsapp-logo"></i>
+                <span>WhatsApp</span>
+              </a>
 
-        <a href="URL_WHATSAPP">
-          <i class="ph ph-whatsapp-logo"></i>
-          <span>WhatsApp</span>
-        </a>
+              <a href="mailto:CORREO@EJEMPLO.COM">
+                <i class="ph ph-envelope"></i>
+                <span>Correo</span>
+              </a>
 
-        <a href="mailto:CORREO@EJEMPLO.COM">
-          <i class="ph ph-envelope"></i>
-          <span>Correo</span>
-        </a>
+              <a href="URL_INSTAGRAM" target="_blank" rel="noopener noreferrer">
+                <i class="ph ph-instagram-logo"></i>
+                <span>Redes oficiales</span>
+              </a>
 
-        <a href="URL_INSTAGRAM" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-instagram-logo"></i>
-          <span>Redes oficiales</span>
-        </a>
+              <a href="#">
+                <span>Aviso de privacidad</span>
+              </a>
 
-        <a href="#">
-          <span>Aviso de privacidad</span>
-        </a>
-
-        <a href="#">
-          <span>Condiciones</span>
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- FOOTER -->
-    <footer class="closing__footer">
-
-      <span>
-        LA TAPADA DE LUNA
-      </span>
-
-      <div class="closing__footer-line"></div>
-
-      <span>
-        UNA HISTORIA QUE SE VIVE
-      </span>
-
-    </footer>
-
-  </div>
-
-</section>
+              <a href="#">
+                <span>Condiciones</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ==========================================
        FOOTER
   =========================================== -->
 
+    <!-- FOOTER -->
     <footer class="site-footer">
-      <div class="container">
-        <div class="site-footer__content">
-          <p class="eyebrow">AGAVE Y ENCUADRE · EDICIÓN 2026</p>
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="site-footer__mark">LT</span>
 
-          <h2>Esta historia se vive.</h2>
+          <div>
+            <span class="site-footer__name"> La Tapada de Luna </span>
 
-          <p>
-            21 NOV 2026 · 4:00 P. M.
-            <br />
-            NOMBRE DE DIOS, DURANGO
-          </p>
-
-          <div class="site-footer__actions">
-            <a href="#boletos" class="button button--copper">
-              Comprar boletos
-            </a>
-
-            <a href="#faq" class="button button--outline">
-              Resolver mis dudas
-            </a>
+            <span class="site-footer__edition">
+              Agave y Encuadre · Edición 2026
+            </span>
           </div>
         </div>
 
-        <div class="site-footer__bottom">
-          <span> LA TAPADA DE LUNA </span>
+        <nav class="site-footer__nav" aria-label="Navegación del footer">
+          <a href="#inicio">Inicio</a>
+          <a href="#historia">La historia</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#boletos">Boletos</a>
+          <a href="#faq">FAQ</a>
+        </nav>
 
-          <div class="site-footer__links">
-            <a href="#"> WhatsApp </a>
+        <div class="site-footer__social">
+          <a
+            href="URL_INSTAGRAM"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="ph ph-instagram-logo"></i>
+          </a>
 
-            <a href="#"> Correo </a>
+          <a
+            href="URL_WHATSAPP"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="ph ph-whatsapp-logo"></i>
+          </a>
+        </div>
+      </div>
 
-            <a href="#"> Instagram </a>
+      <div class="site-footer__bottom">
+        <span> © 2026 La Tapada de Luna </span>
 
-            <a href="#"> Privacidad </a>
+        <div class="site-footer__line"></div>
 
-            <a href="#"> Condiciones </a>
-          </div>
+        <div class="site-footer__legal">
+          <a href="#">Aviso de privacidad</a>
+          <a href="#">Condiciones</a>
         </div>
       </div>
     </footer>
