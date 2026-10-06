@@ -1,576 +1,285 @@
-/* =========================================================
-   ALLIES
-   QUIENES HACEN POSIBLE ESTA HISTORIA
-   ========================================================= */
-
 .allies {
   position: relative;
-
   overflow: hidden;
 
   background: var(--color-film-black);
   color: var(--color-paper);
 
-  padding: 125px 0 90px;
+  padding: 48px 48px 26px;
 }
-
-
-/* =========================================================
-   TEXTURA
-   ========================================================= */
-
-.allies__texture {
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-
-  opacity: 0.11;
-
-  background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
-
-  mix-blend-mode: screen;
-}
-
-
-/* =========================================================
-   INNER
-   ========================================================= */
 
 .allies__inner {
-  position: relative;
-  z-index: 2;
-
-  width: min(
-    calc(100% - (var(--container-padding) * 2)),
-    var(--container-width)
-  );
-
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
 
-/* =========================================================
+/* =========================
    HEADER
-   ========================================================= */
+   ========================= */
 
-.allies__header {
-  display: grid;
+.allies__heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 
-  grid-template-columns:
-    220px
-    minmax(450px, 1fr)
-    300px;
-
-  align-items: end;
-
-  gap: 50px;
-
-  padding-bottom: 65px;
-
-  border-bottom: 1px solid rgba(245, 241, 234, 0.2);
+  margin-bottom: 38px;
 }
 
-
-.allies__eyebrow {
-  display: flex;
-  align-items: center;
-
-  gap: 14px;
-
-  align-self: start;
+.allies__number {
+  padding-top: 7px;
 
   font-family: var(--font-body);
   font-size: 10px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-
-  color: rgba(245, 241, 234, 0.65);
-}
-
-
-.allies__number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 32px;
-  height: 32px;
-
-  border: 1px solid var(--color-copper);
-  border-radius: 50%;
-
-  font-size: 9px;
+  letter-spacing: .18em;
 
   color: var(--color-copper);
 }
 
+.allies__eyebrow {
+  display: block;
 
-.allies__header h2 {
+  margin-bottom: 7px;
+
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+
+  color: rgba(245,241,234,.52);
+}
+
+.allies__heading h2 {
   margin: 0;
 
   font-family: var(--font-display);
-  font-size: clamp(60px, 6vw, 96px);
+  font-size: 58px;
   font-weight: 400;
-
-  line-height: 0.78;
-  letter-spacing: -0.035em;
-
-  color: var(--color-paper);
+  line-height: .8;
+  letter-spacing: -.035em;
 }
 
-
-.allies__header h2 em {
+.allies__heading h2 em {
   color: var(--color-sand);
+  font-weight: 400;
 }
 
 
-.allies__intro {
-  max-width: 260px;
+/* =========================
+   ALLIES
+   ========================= */
 
-  margin: 0;
-
-  font-family: var(--font-body);
-  font-size: 12px;
-
-  line-height: 1.7;
-
-  color: rgba(245, 241, 234, 0.58);
-}
-
-
-/* =========================================================
-   CREDITS
-   ========================================================= */
-
-.allies__credits {
+.allies__names {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-  grid-template-columns:
-    1.15fr
-    1fr
-    1fr;
-
-  border-bottom: 1px solid rgba(245, 241, 234, 0.2);
+  border-top: 1px solid rgba(245,241,234,.25);
+  border-bottom: 1px solid rgba(245,241,234,.25);
 }
-
-
-/* =========================================================
-   ALLY
-   ========================================================= */
 
 .ally {
   position: relative;
 
-  min-height: 280px;
+  min-height: 118px;
 
-  padding: 35px;
+  padding: 20px 30px;
 
-  border-right: 1px solid rgba(245, 241, 234, 0.18);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  border-right: 1px solid rgba(245,241,234,.17);
 
   transition:
-    background 350ms ease;
+    background 300ms ease,
+    padding-left 300ms ease;
 }
 
-.ally:nth-child(3) {
+.ally:last-child {
   border-right: 0;
 }
 
-
 .ally:hover {
-  background: rgba(112, 125, 108, 0.12);
+  background: rgba(245,241,234,.045);
+  padding-left: 36px;
 }
 
-
-/* Número */
-
 .ally__index {
-  display: block;
-
-  margin-bottom: 65px;
+  align-self: flex-start;
 
   font-family: var(--font-body);
-  font-size: 8px;
-  letter-spacing: 0.18em;
+  font-size: 9px;
+  letter-spacing: .16em;
 
   color: var(--color-copper);
 }
 
-
-/* Contenido */
-
 .ally__content {
-  position: relative;
+  min-width: 0;
 }
-
 
 .ally__label {
   display: block;
 
-  margin-bottom: 13px;
+  margin-bottom: 7px;
 
   font-family: var(--font-body);
   font-size: 8px;
-  letter-spacing: 0.17em;
+  letter-spacing: .16em;
   text-transform: uppercase;
 
-  color: rgba(245, 241, 234, 0.5);
+  color: rgba(245,241,234,.48);
 }
-
 
 .ally h3 {
   margin: 0;
 
   font-family: var(--font-display);
-  font-size: 48px;
+  font-size: 43px;
   font-weight: 400;
-
-  line-height: 0.85;
-  letter-spacing: -0.025em;
-
-  color: var(--color-paper);
+  line-height: .78;
+  letter-spacing: -.025em;
 }
-
 
 .ally h3 em {
   color: var(--color-sand);
+  font-weight: 400;
 }
 
-
-.ally p {
-  margin: 8px 0 0;
-
-  font-family: var(--font-body);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  color: rgba(245, 241, 234, 0.5);
-}
-
-
-/* Icono */
-
-.ally__icon {
+.ally > i {
   position: absolute;
 
-  right: 30px;
-  bottom: 30px;
+  right: 24px;
+  top: 20px;
 
-  font-size: 28px;
-
-  color: rgba(207, 185, 158, 0.45);
-
-  transition:
-    transform 350ms ease,
-    color 350ms ease;
-}
-
-.ally:hover .ally__icon {
-  color: var(--color-sand);
-
-  transform: translateY(-4px);
-}
-
-
-/* Flecha */
-
-.ally__arrow {
-  position: absolute;
-
-  right: 32px;
-  top: 34px;
-
-  font-size: 18px;
+  font-size: 19px;
 
   color: var(--color-copper);
-
-  transition: transform 350ms ease;
-}
-
-.ally:hover .ally__arrow {
-  transform: translate(4px, -4px);
 }
 
 
-/* =========================================================
-   SPONSORS
-   ========================================================= */
+/* =========================
+   BOTTOM
+   ========================= */
 
-.ally--sponsors {
-  grid-column: 1 / -1;
+.allies__bottom {
+  min-height: 48px;
 
   display: flex;
   align-items: center;
+  gap: 24px;
 
-  min-height: 190px;
-
-  border-right: 0;
+  font-family: var(--font-body);
+  font-size: 8px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
 }
 
-
-.ally--sponsors .ally__index {
-  align-self: flex-start;
-
-  width: 100px;
-
-  margin-bottom: 0;
+.allies__partners-label {
+  color: rgba(245,241,234,.52);
+  white-space: nowrap;
 }
 
+.allies__logos {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 
-.ally--sponsors .ally__content {
   flex: 1;
 }
 
+.allies__logos span {
+  font-size: 7px;
+  letter-spacing: .2em;
 
-.ally__logos {
-  display: grid;
+  color: rgba(245,241,234,.32);
+}
 
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 18px;
-
-  margin-top: 25px;
+.allies__edition {
+  color: rgba(245,241,234,.4);
+  white-space: nowrap;
 }
 
 
-.ally__logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 72px;
-
-  border: 1px solid rgba(245, 241, 234, 0.18);
-
-  font-family: var(--font-body);
-  font-size: 8px;
-  letter-spacing: 0.16em;
-
-  color: rgba(245, 241, 234, 0.3);
-
-  transition:
-    border-color 250ms ease,
-    color 250ms ease;
-}
-
-.ally__logo:hover {
-  border-color: rgba(207, 185, 158, 0.5);
-
-  color: var(--color-sand);
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.allies__footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 18px;
-
-  padding-top: 35px;
-
-  font-family: var(--font-body);
-  font-size: 8px;
-
-  letter-spacing: 0.2em;
-
-  color: rgba(245, 241, 234, 0.35);
-}
-
-
-.allies__footer-line {
-  width: 55px;
-  height: 1px;
-
-  background: rgba(159, 108, 52, 0.55);
-}
-
-
-/* =========================================================
+/* =========================
    TABLET
-   ========================================================= */
+   ========================= */
 
-@media (max-width: 1000px) {
-
-  .allies {
-    padding: 90px 0 70px;
-  }
-
-
-  .allies__header {
-    grid-template-columns:
-      160px
-      1fr;
-
-    gap: 35px;
-  }
-
-
-  .allies__intro {
-    grid-column: 2;
-
-    margin-top: -20px;
-  }
-
-
-  .allies__credits {
-    grid-template-columns: 1fr 1fr;
-  }
-
-
-  .ally:nth-child(2) {
-    border-right: 0;
-  }
-
-
-  .ally:nth-child(3) {
-    border-right: 1px solid rgba(245, 241, 234, 0.18);
-  }
-
-
-  .ally--sponsors {
-    grid-column: 1 / -1;
-
-    border-right: 0 !important;
-  }
-
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
   .allies {
-    padding: 70px 0 55px;
+    padding: 42px 30px 24px;
   }
 
-
-  .allies__inner {
-    width: calc(100% - 40px);
+  .allies__heading h2 {
+    font-size: 50px;
   }
 
-
-  /* Header */
-
-  .allies__header {
-    display: block;
-
-    padding-bottom: 45px;
+  .allies__names {
+    grid-template-columns: 1fr;
   }
-
-
-  .allies__eyebrow {
-    margin-bottom: 40px;
-  }
-
-
-  .allies__header h2 {
-    font-size: 62px;
-  }
-
-
-  .allies__intro {
-    margin-top: 28px;
-
-    font-size: 11px;
-  }
-
-
-  /* Credits */
-
-  .allies__credits {
-    display: block;
-  }
-
 
   .ally {
-    min-height: 220px;
+    min-height: 92px;
 
-    padding: 28px 0;
-
-    border-right: 0 !important;
-
-    border-bottom: 1px solid rgba(245, 241, 234, 0.18);
+    border-right: 0;
+    border-bottom: 1px solid rgba(245,241,234,.15);
   }
 
-
-  .ally__index {
-    margin-bottom: 45px;
+  .ally:last-child {
+    border-bottom: 0;
   }
-
-
-  .ally h3 {
-    font-size: 44px;
-  }
-
-
-  /* Sponsors */
-
-  .ally--sponsors {
-    display: block;
-
-    min-height: 0;
-
-    padding: 32px 0;
-  }
-
-
-  .ally--sponsors .ally__index {
-    width: auto;
-
-    margin-bottom: 35px;
-  }
-
-
-  .ally__logos {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 10px;
-  }
-
-
-  .ally__logo {
-    height: 65px;
-  }
-
-
-  /* Footer */
-
-  .allies__footer {
-    gap: 10px;
-
-    font-size: 6px;
-  }
-
-
-  .allies__footer-line {
-    width: 30px;
-  }
-
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
+/* =========================
+   MOBILE
+   ========================= */
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
 
-  .allies__header h2 {
-    font-size: 53px;
+  .allies {
+    padding: 38px 20px 22px;
+  }
+
+  .allies__heading {
+    gap: 13px;
+    margin-bottom: 28px;
+  }
+
+  .allies__heading h2 {
+    font-size: 43px;
+  }
+
+  .allies__eyebrow {
+    font-size: 8px;
+  }
+
+  .ally {
+    min-height: 82px;
+    padding: 15px 8px;
   }
 
   .ally h3 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
+  .ally__label {
+    font-size: 7px;
+  }
+
+  .allies__bottom {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 8px;
+  }
+
+  .allies__logos {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .allies__edition {
+    margin-left: auto;
+  }
 }

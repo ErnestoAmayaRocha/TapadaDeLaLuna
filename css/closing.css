@@ -1,0 +1,677 @@
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.closing {
+  position: relative;
+  overflow: hidden;
+
+   background:
+    url("../assets/img/Kit_Canva_La_Tapada_2026/agosto/Vintage\ Moonlit\ Film\ Collage.png")
+    center center / cover
+    no-repeat;
+  color: var(--color-paper);
+
+  min-height: 390px;
+
+  padding: 30px 48px 22px;
+}
+
+.closing__inner {
+  position: relative;
+  z-index: 5;
+
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   GRAIN
+   ========================================================= */
+
+.closing::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.13;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.25'/%3E%3C/svg%3E");
+}
+
+
+/* =========================================================
+   TOP
+   ========================================================= */
+
+.closing__top {
+  display: grid;
+
+  grid-template-columns: auto auto 1fr auto;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid rgba(245, 241, 234, 0.28);
+
+  font-family: var(--font-body);
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.closing__number {
+  color: var(--color-sand);
+}
+
+.closing__label {
+  color: rgba(245, 241, 234, 0.75);
+}
+
+.closing__top-line {
+  height: 1px;
+
+  background: rgba(245, 241, 234, 0.2);
+}
+
+.closing__edition {
+  color: rgba(245, 241, 234, 0.45);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.closing__content {
+  position: relative;
+
+  min-height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  padding: 45px 0 38px;
+}
+
+
+/* =========================================================
+   COPY
+   ========================================================= */
+
+.closing__copy {
+  position: relative;
+  z-index: 3;
+}
+
+.closing__eyebrow {
+  margin: 0 0 12px;
+
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--color-sand);
+}
+
+.closing__copy h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(65px, 8vw, 110px);
+
+  font-weight: 400;
+
+  line-height: 0.72;
+
+  letter-spacing: -0.045em;
+}
+
+.closing__copy h2 em {
+  color: var(--color-sand);
+
+  font-weight: 400;
+}
+
+.closing__event {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  color: rgba(245, 241, 234, 0.82);
+}
+
+.closing__event i {
+  font-size: 5px;
+
+  color: var(--color-copper);
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.closing__actions {
+  position: relative;
+  z-index: 6;
+
+  width: 270px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.closing__button {
+  min-height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 0 20px;
+
+  border: 1px solid transparent;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    transform 250ms ease,
+    background 250ms ease,
+    color 250ms ease,
+    border-color 250ms ease;
+}
+
+.closing__button i {
+  font-size: 17px;
+}
+
+.closing__button:hover {
+  transform: translateX(-5px);
+}
+
+.closing__button--primary {
+  background: var(--color-copper);
+
+  color: var(--color-paper);
+}
+
+.closing__button--primary:hover {
+  background: var(--color-sand);
+
+  color: var(--color-film-black);
+}
+
+.closing__button--secondary {
+  background: var(--color-paper);
+
+  color: var(--color-film-black);
+}
+
+.closing__button--secondary:hover {
+  background: transparent;
+
+  border-color: var(--color-paper);
+
+  color: var(--color-paper);
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.closing__contact {
+  position: relative;
+  z-index: 5;
+
+  padding: 14px 0;
+
+  border-top: 1px solid rgba(245, 241, 234, 0.22);
+}
+
+.closing__contact-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+}
+
+.closing__contact-links a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  font-family: var(--font-body);
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+
+  color: rgba(245, 241, 234, 0.72);
+
+  text-decoration: none;
+
+  transition: color 200ms ease;
+}
+
+.closing__contact-links a:not(:last-child)::after {
+  content: "·";
+
+  margin-left: 15px;
+
+  color: var(--color-copper);
+}
+
+.closing__contact-links a i {
+  font-size: 14px;
+
+  color: var(--color-sand);
+}
+
+.closing__contact-links a:hover {
+  color: var(--color-paper);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.closing__footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding-top: 13px;
+
+  border-top: 1px solid rgba(245, 241, 234, 0.15);
+
+  font-family: var(--font-body);
+  font-size: 7px;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  color: rgba(245, 241, 234, 0.38);
+}
+
+.closing__footer-line {
+  width: 50px;
+
+  height: 1px;
+
+  background: rgba(245, 241, 234, 0.2);
+}
+
+
+/* =========================================================
+   DECORATIVE MOON
+   ========================================================= */
+
+.closing__decor--moon {
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: 260px;
+  top: -100px;
+
+  z-index: 1;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      rgba(207, 185, 158, 0.55),
+      rgba(207, 185, 158, 0.18) 48%,
+      transparent 70%
+    );
+
+  opacity: 0.55;
+}
+
+.closing__decor--moon::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 35px;
+
+  border: 1px solid rgba(245, 241, 234, 0.15);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   AGAVE IMAGE
+   ========================================================= */
+
+.closing__decor--agave {
+  position: absolute;
+
+  z-index: 2;
+
+  width: 360px;
+  height: 360px;
+
+  right: 50px;
+  bottom: -180px;
+
+  opacity: 0.45;
+
+  pointer-events: none;
+}
+
+.closing__decor--agave img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  filter:
+    brightness(0.55)
+    sepia(0.15);
+
+  transform: rotate(-8deg);
+}
+
+
+/* =========================================================
+   FILM FRAME
+   ========================================================= */
+
+.closing__film {
+  position: absolute;
+
+  z-index: 2;
+
+  right: 400px;
+  top: 80px;
+
+  width: 110px;
+  height: 160px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 14px 8px;
+
+  border: 5px solid rgba(20, 20, 20, 0.55);
+
+  transform: rotate(-10deg);
+
+  opacity: 0.5;
+
+  pointer-events: none;
+}
+
+.closing__film::before,
+.closing__film::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  height: 10px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 9px,
+      rgba(245, 241, 234, 0.25) 9px 14px
+    );
+}
+
+.closing__film::before {
+  top: -14px;
+}
+
+.closing__film::after {
+  bottom: -14px;
+}
+
+.closing__film span {
+  font-family: var(--font-body);
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+
+  color: var(--color-sand);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .closing {
+    padding: 28px 30px 20px;
+  }
+
+  .closing__copy h2 {
+    font-size: clamp(60px, 9vw, 90px);
+  }
+
+  .closing__actions {
+    width: 230px;
+  }
+
+  .closing__decor--moon {
+    right: 170px;
+  }
+
+  .closing__film {
+    right: 300px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .closing {
+    min-height: auto;
+
+    padding: 25px 20px 20px;
+  }
+
+
+  /* Top */
+
+  .closing__top {
+    grid-template-columns: auto 1fr;
+
+    gap: 12px;
+  }
+
+  .closing__top-line,
+  .closing__edition {
+    display: none;
+  }
+
+
+  /* Content */
+
+  .closing__content {
+    min-height: auto;
+
+    display: block;
+
+    padding: 60px 0 35px;
+  }
+
+  .closing__copy h2 {
+    font-size: clamp(60px, 18vw, 90px);
+
+    line-height: 0.76;
+  }
+
+  .closing__event {
+    flex-wrap: wrap;
+
+    max-width: 330px;
+
+    gap: 8px;
+
+    margin-top: 28px;
+
+    font-size: 8px;
+  }
+
+
+  /* Buttons */
+
+  .closing__actions {
+    width: 100%;
+
+    max-width: 320px;
+
+    margin-top: 35px;
+
+    gap: 8px;
+  }
+
+  .closing__button {
+    min-height: 48px;
+  }
+
+
+  /* Contact */
+
+  .closing__contact {
+    padding: 17px 0;
+  }
+
+  .closing__contact-links {
+    flex-wrap: wrap;
+
+    gap: 10px 15px;
+  }
+
+  .closing__contact-links a:not(:last-child)::after {
+    display: none;
+  }
+
+
+  /* Footer */
+
+  .closing__footer {
+    justify-content: space-between;
+
+    font-size: 6px;
+  }
+
+
+  /* Decorations */
+
+  .closing__decor--moon {
+    width: 220px;
+    height: 220px;
+
+    right: -80px;
+    top: 100px;
+
+    opacity: 0.3;
+  }
+
+  .closing__decor--agave {
+    width: 230px;
+    height: 230px;
+
+    right: -70px;
+    bottom: -110px;
+
+    opacity: 0.3;
+  }
+
+  .closing__film {
+    width: 75px;
+    height: 110px;
+
+    right: 25px;
+    top: 150px;
+
+    opacity: 0.22;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .closing__copy h2 {
+    font-size: 58px;
+  }
+
+  .closing__event {
+    font-size: 7px;
+  }
+
+  .closing__contact-links a {
+    font-size: 7px;
+  }
+
+}
