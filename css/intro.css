@@ -1,225 +1,211 @@
-/* =========================================
-   INTRO THIN — 03
-   ========================================= */
+/* =========================================================
+   INTRO THIN
+   LA TAPADA DE LUNA · AGAVE Y ENCUADRE 2026
+   ========================================================= */
 
 .intro-thin {
   position: relative;
-
-  min-height: 185px;
-
+  min-height: 205px;
   overflow: hidden;
 
-  background: #d8d0c2;
+  background: var(--color-agave);
+  color: var(--color-paper);
 
-  color: var(--color-charcoal);
-
-  border-top: 1px solid rgba(84, 84, 84, 0.2);
-  border-bottom: 1px solid rgba(84, 84, 84, 0.2);
+  border-top: 1px solid rgba(245, 241, 234, 0.18);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.18);
 }
 
 
-/* =========================================
-   PAPER TEXTURE
-   ========================================= */
-
-.intro-thin::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-
-  opacity: 0.18;
-
-  background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
-
-  mix-blend-mode: multiply;
-
-  z-index: 1;
-}
-
-
-/* =========================================
-   DECORATIVE BACKGROUND
-   ========================================= */
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
 
 .intro-thin__bg {
   position: absolute;
   inset: 0;
-
   pointer-events: none;
-
   overflow: hidden;
-
-  z-index: 0;
 }
 
 
-/* =========================================
-   FINE LINES
-   ========================================= */
+/* Grain / textura */
 
-.intro-thin__bg-line {
+.intro-thin__texture {
   position: absolute;
+  inset: 0;
 
-  display: block;
+  opacity: 0.16;
 
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+
+  mix-blend-mode: soft-light;
+}
+
+
+/* Líneas editoriales */
+
+.intro-thin__line {
+  position: absolute;
   height: 1px;
 
-  background: rgba(84, 84, 84, 0.18);
-
-  transform-origin: left center;
+  background: rgba(245, 241, 234, 0.14);
 }
 
-.intro-thin__bg-line--1 {
-  width: 42%;
-
-  left: -5%;
-  top: 28%;
-
-  transform: rotate(-4deg);
+.intro-thin__line--1 {
+  width: 220px;
+  top: 28px;
+  left: 4%;
 }
 
-.intro-thin__bg-line--2 {
-  width: 30%;
-
-  right: -3%;
-  top: 70%;
-
-  transform: rotate(5deg);
+.intro-thin__line--2 {
+  width: 140px;
+  right: 14%;
+  bottom: 32px;
+  transform: rotate(-90deg);
 }
 
-.intro-thin__bg-line--3 {
-  width: 22%;
-
-  left: 38%;
-  bottom: 13%;
-
-  background: rgba(159, 108, 52, 0.3);
-
-  transform: rotate(-2deg);
+.intro-thin__line--3 {
+  width: 320px;
+  right: -80px;
+  top: 50%;
+  transform: rotate(-22deg);
 }
 
 
-/* =========================================
-   CIRCLES
-   ========================================= */
+/* Círculos */
 
 .intro-thin__circle {
   position: absolute;
 
-  display: block;
-
-  border: 1px solid rgba(112, 125, 108, 0.25);
-
+  border: 1px solid rgba(245, 241, 234, 0.15);
   border-radius: 50%;
 }
 
 .intro-thin__circle--1 {
-  width: 240px;
-  height: 240px;
+  width: 120px;
+  height: 120px;
 
-  right: -95px;
-  top: -115px;
+  left: 8%;
+  top: -72px;
 }
 
 .intro-thin__circle--2 {
-  width: 130px;
-  height: 130px;
+  width: 190px;
+  height: 190px;
 
-  left: 18%;
-  bottom: -95px;
+  right: 2%;
+  bottom: -135px;
+}
 
-  border-color: rgba(159, 108, 52, 0.2);
+.intro-thin__circle--3 {
+  width: 44px;
+  height: 44px;
+
+  right: 27%;
+  top: 25px;
+
+  border-color: rgba(159, 108, 52, 0.55);
 }
 
 
-/* =========================================
-   CROSSES
-   ========================================= */
+/* Cruces */
 
 .intro-thin__cross {
   position: absolute;
 
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: 300;
 
-  color: rgba(159, 108, 52, 0.45);
+  color: rgba(207, 185, 158, 0.55);
 }
 
 .intro-thin__cross--1 {
-  left: 8%;
-  top: 24%;
+  left: 24%;
+  top: 22px;
 }
 
 .intro-thin__cross--2 {
-  right: 28%;
-  bottom: 20%;
+  right: 36%;
+  bottom: 24px;
+}
+
+.intro-thin__cross--3 {
+  right: 7%;
+  top: 24px;
 }
 
 
-/* =========================================
-   COORDINATES
-   ========================================= */
-
-.intro-thin__coordinates {
-  position: absolute;
-
-  right: 24px;
-  bottom: 12px;
-
-  font-family: var(--font-body);
-  font-size: 7px;
-  letter-spacing: 0.2em;
-
-  color: rgba(84, 84, 84, 0.4);
-
-  transform: rotate(-90deg);
-
-  transform-origin: right bottom;
-}
-
-
-/* =========================================
-   GIANT 2026
-   ========================================= */
+/* Año gigante */
 
 .intro-thin__edition-mark {
   position: absolute;
 
-  right: 5%;
-  top: 50%;
+  right: 4%;
+  bottom: -48px;
 
   font-family: var(--font-display);
   font-size: 180px;
-  font-weight: 400;
   line-height: 1;
 
-  color: rgba(112, 125, 108, 0.075);
-
-  transform: translateY(-50%);
-
-  user-select: none;
+  color: rgba(245, 241, 234, 0.055);
 }
 
 
-/* =========================================
+/* Coordenadas */
+
+.intro-thin__coordinates {
+  position: absolute;
+
+  left: 4%;
+  bottom: 22px;
+
+  font-family: var(--font-body);
+  font-size: 7px;
+  letter-spacing: 0.22em;
+
+  color: rgba(245, 241, 234, 0.32);
+}
+
+
+/* Sello */
+
+.intro-thin__stamp {
+  position: absolute;
+
+  right: 8%;
+  top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 74px;
+  height: 74px;
+
+  border: 1px solid rgba(245, 241, 234, 0.25);
+  border-radius: 50%;
+
+  transform: rotate(-10deg);
+
+  font-family: var(--font-body);
+  font-size: 6px;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+
+  color: rgba(245, 241, 234, 0.42);
+}
+
+
+/* =========================================================
    INNER
-   ========================================= */
+   ========================================================= */
 
 .intro-thin__inner {
   position: relative;
-
-  z-index: 3;
-
-  width: min(100%, var(--container-width));
-  min-height: 185px;
-
-  margin: 0 auto;
-
-  padding: 38px var(--container-padding);
+  z-index: 2;
 
   display: grid;
 
@@ -227,140 +213,240 @@
     auto
     auto
     1px
-    minmax(280px, 1fr)
+    minmax(300px, 1fr)
     auto
     auto;
 
   align-items: center;
 
+  min-height: 205px;
+
+  padding: 38px var(--container-padding);
+
   gap: 28px;
 }
 
 
-/* =========================================
-   NUMBER
-   ========================================= */
+/* Línea decorativa izquierda */
 
-.intro-thin__number {
-  align-self: flex-start;
+.intro-thin__inner::before {
+  content: "";
 
-  font-family: var(--font-body);
-  font-size: 10px;
-  letter-spacing: 0.18em;
+  position: absolute;
 
-  color: var(--color-copper);
+  left: var(--container-padding);
+  top: 17px;
+
+  width: 45px;
+  height: 1px;
+
+  background: var(--color-copper);
+
+  opacity: 0.8;
 }
 
 
-/* =========================================
+/* Código editorial */
+
+.intro-thin__inner::after {
+  content: "LTL · 26";
+
+  position: absolute;
+
+  right: var(--container-padding);
+  top: 16px;
+
+  font-family: var(--font-body);
+  font-size: 7px;
+  letter-spacing: 0.18em;
+
+  color: rgba(245, 241, 234, 0.35);
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.intro-thin__number {
+  align-self: start;
+
+  padding-top: 3px;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+
+  color: var(--color-sand);
+}
+
+
+/* =========================================================
    LABEL
-   ========================================= */
+   ========================================================= */
 
 .intro-thin__label {
   display: flex;
   flex-direction: column;
-
   gap: 5px;
 }
 
 .intro-thin__eyebrow {
   font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
-
-  letter-spacing: 0.14em;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 
-  color: var(--color-charcoal);
+  color: var(--color-paper);
 }
 
 .intro-thin__edition {
   font-family: var(--font-body);
-  font-size: 9px;
-
+  font-size: 7px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 
-  color: rgba(84, 84, 84, 0.5);
+  color: rgba(245, 241, 234, 0.55);
 }
 
 
-/* =========================================
+/* =========================================================
    DIVIDER
-   ========================================= */
+   ========================================================= */
 
-.intro-thin__line {
+.intro-thin__divider {
   width: 1px;
-  height: 65px;
+  height: 74px;
 
-  background: rgba(84, 84, 84, 0.22);
+  background: rgba(245, 241, 234, 0.24);
 }
 
 
-/* =========================================
+/* =========================================================
    MESSAGE
-   ========================================= */
+   ========================================================= */
 
 .intro-thin__message {
-  display: flex;
-  align-items: baseline;
+  position: relative;
+}
 
-  gap: 16px;
+.intro-thin__small-title {
+  display: block;
+  margin-bottom: 4px;
+
+  font-family: var(--font-body);
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+
+  color: rgba(245, 241, 234, 0.58);
 }
 
 .intro-thin__message h2 {
   margin: 0;
 
   font-family: var(--font-display);
-  font-size: clamp(30px, 3vw, 46px);
+  font-size: clamp(32px, 3vw, 48px);
   font-weight: 400;
-  line-height: 1;
-
+  line-height: 0.9;
   letter-spacing: -0.02em;
 
-  color: var(--color-charcoal);
+  color: var(--color-paper);
 }
 
 .intro-thin__message p {
-  margin: 0;
+  margin: 7px 0 0;
 
   font-family: var(--font-display);
-  font-size: clamp(18px, 1.6vw, 24px);
+  font-size: 17px;
   font-style: italic;
+  line-height: 1;
 
-  color: var(--color-agave);
+  color: var(--color-sand);
 }
 
 
-/* =========================================
-   KEYWORDS
-   ========================================= */
+/* Mini film strip */
 
-.intro-thin__elements {
+.intro-thin__message::after {
+  content: "";
+
+  display: block;
+
+  width: 115px;
+  height: 18px;
+
+  margin-top: 9px;
+
+  border-top: 1px solid rgba(245, 241, 234, 0.28);
+  border-bottom: 1px solid rgba(245, 241, 234, 0.28);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 13px,
+      rgba(245, 241, 234, 0.18) 13px 17px,
+      transparent 17px 30px
+    );
+
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   ICONOGRAPHY
+   ========================================================= */
+
+.intro-thin__icons {
+  display: grid;
+
+  grid-template-columns: repeat(2, auto);
+
+  gap: 13px 20px;
+
+  padding-left: 22px;
+
+  border-left: 1px solid rgba(245, 241, 234, 0.25);
+}
+
+.intro-thin__icon {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 
-  gap: 6px;
-
-  padding-left: 20px;
-
-  border-left: 1px solid rgba(159, 108, 52, 0.35);
+  gap: 7px;
 }
 
-.intro-thin__elements span {
-  font-family: var(--font-body);
-  font-size: 9px;
+.intro-thin__icon i {
+  font-size: 17px;
 
+  color: var(--color-sand);
+
+  transition:
+    transform var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.intro-thin__icon span {
+  font-family: var(--font-body);
+  font-size: 7px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 
-  color: var(--color-charcoal);
+  color: rgba(245, 241, 234, 0.72);
+}
+
+.intro-thin__icon:hover i {
+  color: var(--color-paper);
+
+  transform: translateY(-2px);
 }
 
 
-/* =========================================
-   AGAVE IMAGE
-   ========================================= */
+/* =========================================================
+   AGAVE
+   ========================================================= */
 
 .intro-thin__agave {
   position: relative;
@@ -369,97 +455,140 @@
   align-items: center;
   justify-content: center;
 
-  width: 100px;
-  height: 100px;
+  width: 105px;
+  height: 105px;
 }
 
 .intro-thin__agave img {
-  display: block;
+  position: relative;
+  z-index: 2;
 
-  width: 82px;
-  height: 82px;
+  width: 105px;
+  height: 105px;
 
   object-fit: contain;
 
-  opacity: 0.85;
+  opacity: 0.82;
 
-  mix-blend-mode: multiply;
+  filter: brightness(0) invert(1);
 
   transition:
-    transform 600ms ease,
-    opacity 400ms ease;
+    transform var(--transition-base),
+    opacity var(--transition-base);
 }
 
-.intro-thin:hover .intro-thin__agave img {
+.intro-thin__agave:hover img {
   opacity: 1;
 
   transform: rotate(-4deg) scale(1.04);
 }
 
 
-/* =========================================
-   AGAVE MARK
-   ========================================= */
+/* Círculo */
 
-.intro-thin__agave-mark {
+.intro-thin__agave-circle {
   position: absolute;
+  inset: 7px;
 
-  width: 74px;
-  height: 74px;
-
-  border: 1px solid rgba(159, 108, 52, 0.28);
+  border: 1px solid rgba(207, 185, 158, 0.35);
   border-radius: 50%;
-
-  transform: rotate(18deg);
 }
 
 
-/* =========================================
-   TAPADA DETAIL
-   ========================================= */
+/* Línea decorativa */
 
-.intro-thin__tapada {
+.intro-thin__agave::before {
+  content: "";
+
   position: absolute;
 
-  right: var(--container-padding);
-  bottom: 7px;
-
-  display: flex;
-  align-items: center;
-
-  gap: 8px;
-
-  opacity: 0.6;
-}
-
-.intro-thin__tapada-line {
-  width: 28px;
+  width: 130px;
   height: 1px;
 
-  background: var(--color-copper);
+  background: rgba(207, 185, 158, 0.35);
+
+  transform: rotate(-35deg);
 }
 
-.intro-thin__tapada-text {
-  font-family: var(--font-body);
-  font-size: 7px;
 
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+/* Estrella */
 
-  color: var(--color-charcoal);
-}
+.intro-thin__agave::after {
+  content: "✦";
 
-.intro-thin__tapada-year {
-  font-family: var(--font-display);
-  font-size: 12px;
+  position: absolute;
+
+  right: -14px;
+  top: 5px;
+
+  font-size: 10px;
 
   color: var(--color-copper);
 }
 
 
-/* =========================================
+/* Label */
+
+.intro-thin__agave-label {
+  position: absolute;
+
+  z-index: 3;
+
+  bottom: 5px;
+
+  font-family: var(--font-body);
+  font-size: 6px;
+  letter-spacing: 0.22em;
+
+  color: var(--color-paper);
+}
+
+
+/* =========================================================
+   LA TAPADA
+   ========================================================= */
+
+.intro-thin__tapada {
+  align-self: end;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 3px;
+
+  padding-bottom: 2px;
+}
+
+.intro-thin__tapada-line {
+  width: 42px;
+  height: 1px;
+
+  margin-bottom: 2px;
+
+  background: var(--color-copper);
+}
+
+.intro-thin__tapada-text {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-style: italic;
+
+  color: var(--color-paper);
+}
+
+.intro-thin__tapada-year {
+  font-family: var(--font-body);
+  font-size: 7px;
+  letter-spacing: 0.2em;
+
+  color: rgba(245, 241, 234, 0.55);
+}
+
+
+/* =========================================================
    TABLET
-   ========================================= */
+   ========================================================= */
 
 @media (max-width: 1100px) {
 
@@ -468,111 +597,90 @@
       auto
       auto
       1px
-      1fr
+      minmax(250px, 1fr)
       auto;
 
-    gap: 22px;
+    gap: 20px;
   }
 
-  .intro-thin__elements {
+  .intro-thin__icons {
     display: none;
   }
 
   .intro-thin__agave {
-    width: 85px;
-    height: 85px;
+    width: 90px;
+    height: 90px;
   }
 
   .intro-thin__agave img {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
   }
 
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE
-   ========================================= */
+   ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 760px) {
 
   .intro-thin {
-    min-height: 205px;
+    min-height: 0;
   }
 
   .intro-thin__inner {
-    min-height: 205px;
+    display: grid;
 
-    padding: 28px 24px;
+    grid-template-columns: auto 1fr auto;
 
-    grid-template-columns:
-      auto
-      1fr
-      auto;
+    min-height: 185px;
 
-    grid-template-rows:
-      auto
-      1fr;
+    padding: 32px 24px;
 
-    align-items: start;
-
-    gap: 14px;
+    gap: 16px;
   }
 
-
-  /* Number */
 
   .intro-thin__number {
-    padding-top: 3px;
+    font-size: 9px;
   }
 
-
-  /* Label */
 
   .intro-thin__label {
     align-self: start;
   }
 
 
-  /* Hide desktop divider */
-
-  .intro-thin__line {
+  .intro-thin__divider {
     display: none;
   }
 
 
-  /* Message */
-
   .intro-thin__message {
-    grid-column: 1 / 3;
+    grid-column: 1 / -1;
 
-    display: block;
+    padding-top: 10px;
 
-    padding-top: 18px;
+    border-top: 1px solid rgba(245, 241, 234, 0.2);
   }
 
   .intro-thin__message h2 {
-    font-size: 34px;
-  }
-
-  .intro-thin__message p {
-    margin-top: 7px;
-
-    font-size: 19px;
+    font-size: 38px;
   }
 
 
-  /* Agave */
+  .intro-thin__message::after {
+    margin-top: 8px;
+  }
+
 
   .intro-thin__agave {
-    grid-column: 3;
-    grid-row: 1 / 3;
+    width: 62px;
+    height: 62px;
 
-    width: 72px;
-    height: 72px;
-
-    margin-top: 8px;
+    justify-self: end;
   }
 
   .intro-thin__agave img {
@@ -580,40 +688,86 @@
     height: 62px;
   }
 
-  .intro-thin__agave-mark {
-    width: 58px;
-    height: 58px;
+  .intro-thin__agave-circle {
+    inset: 3px;
   }
 
-
-  /* Tapada */
-
-  .intro-thin__tapada {
-    left: 24px;
-    right: auto;
-    bottom: 15px;
-  }
-
-
-  /* Background */
-
-  .intro-thin__edition-mark {
-    right: -10px;
-    top: 50%;
-
-    font-size: 125px;
-  }
-
-  .intro-thin__coordinates {
+  .intro-thin__agave-label {
     display: none;
   }
 
-  .intro-thin__circle--1 {
-    width: 180px;
-    height: 180px;
 
-    right: -90px;
-    top: -80px;
+  .intro-thin__tapada {
+    display: none;
+  }
+
+
+  .intro-thin__coordinates {
+    left: 24px;
+    bottom: 14px;
+
+    font-size: 6px;
+  }
+
+
+  .intro-thin__edition-mark {
+    right: -15px;
+    bottom: -30px;
+
+    font-size: 120px;
+  }
+
+
+  .intro-thin__stamp {
+    width: 58px;
+    height: 58px;
+
+    right: 20px;
+    top: 18px;
+
+    font-size: 5px;
+  }
+
+
+  .intro-thin__inner::before {
+    left: 24px;
+  }
+
+  .intro-thin__inner::after {
+    right: 24px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .intro-thin__inner {
+    padding: 28px 20px;
+  }
+
+  .intro-thin__message h2 {
+    font-size: 34px;
+  }
+
+  .intro-thin__message p {
+    font-size: 15px;
+  }
+
+  .intro-thin__coordinates {
+    left: 20px;
+  }
+
+  .intro-thin__inner::before {
+    left: 20px;
+  }
+
+  .intro-thin__inner::after {
+    right: 20px;
   }
 
 }
