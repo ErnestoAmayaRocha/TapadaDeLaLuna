@@ -7,7 +7,15 @@
 /* ==================================================
    DESIGN TOKENS
    ================================================== */
-
+html,
+body,
+button,
+input,
+textarea,
+select,
+a {
+  font-family: "Cormorant Garamond", serif;
+}
 :root {
 
   /* Colors */
