@@ -404,51 +404,69 @@
    ========================================================= */
 
 .martha__cta {
+  width: fit-content;
+  min-width: 310px;
+  min-height: 64px;
+
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 28px;
 
-  gap: 18px;
+  margin-top: 34px;
+  padding: 0 22px 0 28px;
 
-  margin-top: 45px;
+  background: var(--color-copper);
+  color: var(--color-paper);
 
-  padding-bottom: 10px;
+  border: 1px solid var(--color-copper);
 
-  border-bottom: 1px solid var(--color-copper);
+  text-decoration: none;
 
   font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 500;
-
-  letter-spacing: 0.14em;
+  font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
 
-  color: var(--color-film-black);
+  box-shadow: 0 10px 25px rgba(159, 108, 52, 0.22);
 
   transition:
-    gap 300ms ease,
-    color 300ms ease;
+    transform 300ms ease,
+    background 300ms ease,
+    box-shadow 300ms ease;
 }
 
+.martha__cta:hover {
+  background: #b27a3c;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 16px 32px rgba(159, 108, 52, 0.32);
+}
+
+.martha__cta span {
+  white-space: nowrap;
+}
 
 .martha__cta i {
-  font-size: 18px;
+  width: 36px;
+  height: 36px;
 
-  color: var(--color-copper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(245, 241, 234, 0.55);
+
+  font-size: 18px;
 
   transition: transform 300ms ease;
 }
 
-
-.martha__cta:hover {
-  gap: 24px;
-
-  color: var(--color-agave);
-}
-
 .martha__cta:hover i {
-  transform: translate(3px, -3px);
+  transform: translate(4px, -4px);
 }
-
 
 /* =========================================================
    FOOTER
