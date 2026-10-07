@@ -3,7 +3,11 @@
    ========================================================= */
 
 .faq {
-  background: var(--color-paper);
+ background:
+   
+    url("../assets/img/Kit_Canva_La_Tapada_2026/agosto/fondo1.png")
+    center center / cover
+    no-repeat;
   color: var(--color-film-black);
 
   padding: 55px 48px 60px;

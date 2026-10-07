@@ -5,7 +5,11 @@
 .location {
   position: relative;
   overflow: hidden;
-  background: var(--color-paper);
+  background:
+   
+    url("../assets/img/Kit_Canva_La_Tapada_2026/agosto/fondo1.png")
+    center center / cover
+    no-repeat;
   color: var(--color-charcoal);
 }
 
@@ -429,6 +433,607 @@
     right: -100px;
     bottom: 30px;
     opacity: 0.5;
+  }
+
+}
+
+
+/* =========================================================
+   PAQUETES URAJÁN — DENTRO DE LOCATION INFO
+   ========================================================= */
+
+.hotel-packages {
+  width: 100%;
+  margin-top: 34px;
+}
+
+.hotel-packages__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.hotel-packages__number {
+  flex-shrink: 0;
+
+  width: 28px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(20, 20, 20, 0.22);
+  border-radius: 3px;
+
+  font-family: var(--font-body);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--color-copper);
+}
+
+.hotel-packages__eyebrow {
+  margin: 0 0 3px;
+
+  font-family: var(--font-body);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+
+  color: var(--color-agave);
+}
+
+.hotel-packages__header h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+}
+
+.hotel-packages__header h2 em {
+  color: var(--color-copper);
+  font-weight: 400;
+}
+
+.hotel-packages__intro {
+  margin: -7px 0 20px;
+  padding-left: 40px;
+
+  font-family: var(--font-body);
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+
+  color: rgba(20, 20, 20, 0.55);
+}
+
+
+/* GRID */
+
+.hotel-packages__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+
+/* CARD */
+
+.hotel-package {
+  position: relative;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.82),
+      rgba(207, 185, 158, 0.16)
+    );
+
+  border: 1px solid rgba(20, 20, 20, 0.14);
+
+  transition:
+    transform 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.hotel-package:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(159, 108, 52, 0.5);
+
+  box-shadow: 0 8px 25px rgba(20, 20, 20, 0.08);
+}
+
+
+/* CABECERA */
+
+.hotel-package__top {
+  min-height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-film-black);
+
+  border-bottom: 1px solid rgba(159, 108, 52, 0.5);
+}
+
+.hotel-package__top span {
+  font-family: var(--font-body);
+  font-size: 8px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+
+  color: var(--color-paper);
+}
+
+
+/* CONTENIDO */
+
+.hotel-package__body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 205px;
+
+  padding: 15px 15px 13px;
+}
+
+
+/* PRECIO */
+
+.hotel-package__price {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+
+  color: var(--color-film-black);
+}
+
+.hotel-package__divider {
+  width: 30px;
+  height: 1px;
+
+  margin: 9px 0 12px;
+
+  background: var(--color-copper);
+}
+
+
+/* BENEFICIOS */
+
+.hotel-package__features {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-package__features li {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 7px;
+  align-items: start;
+}
+
+.hotel-package__features i {
+  margin-top: 1px;
+
+  font-size: 14px;
+
+  color: var(--color-copper);
+}
+
+.hotel-package__features span {
+  font-family: var(--font-body);
+  font-size: 9px;
+  line-height: 1.4;
+
+  color: rgba(20, 20, 20, 0.72);
+}
+
+
+/* BOTÓN */
+
+.hotel-package__button {
+  margin-top: auto;
+
+  min-height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 11px;
+
+  background: var(--color-copper);
+  color: var(--color-paper);
+
+  text-decoration: none;
+
+  font-family: var(--font-body);
+  font-size: 8px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  transition:
+    background 200ms ease,
+    transform 200ms ease;
+}
+
+.hotel-package__button i {
+  font-size: 13px;
+}
+
+.hotel-package__button:hover {
+  background: var(--color-film-black);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hotel-packages__header h2 {
+    font-size: 30px;
+  }
+
+  .hotel-package__price {
+    font-size: 27px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .hotel-packages {
+    margin-top: 28px;
+  }
+
+  .hotel-packages__grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .hotel-package__body {
+    min-height: 0;
+  }
+
+  .hotel-package__price {
+    font-size: 30px;
+  }
+
+  .hotel-package__features span {
+    font-size: 10px;
+  }
+
+}.location__whatsapp {
+  width: 100%;
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: 24px;
+  padding: 13px 18px;
+
+  background: var(--color-copper);
+  color: var(--color-paper);
+
+  border: 1px solid var(--color-copper);
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 20px rgba(159, 108, 52, 0.18);
+
+  transition:
+    transform 250ms ease,
+    background 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.location__whatsapp:hover {
+  background: #8b5d2d;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(159, 108, 52, 0.28);
+}
+
+
+/* ICONO */
+
+.location__whatsapp-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(245, 241, 234, 0.5);
+}
+
+.location__whatsapp-icon i {
+  font-size: 24px;
+}
+
+
+/* TEXTO */
+
+.location__whatsapp-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+.location__whatsapp-text small {
+  font-size: 8px;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+
+  opacity: 0.75;
+}
+
+
+/* FLECHA */
+
+.location__whatsapp-arrow {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  font-size: 22px;
+
+  transition: transform 250ms ease;
+}
+
+.location__whatsapp:hover .location__whatsapp-arrow {
+  transform: translate(4px, -4px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .location__whatsapp {
+    min-height: 68px;
+    gap: 12px;
+    padding: 11px 14px;
+  }
+
+  .location__whatsapp-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .location__whatsapp-icon i {
+    font-size: 21px;
+  }
+
+  .location__whatsapp-text {
+    font-size: 12px;
+  }
+
+  .location__whatsapp-text small {
+    font-size: 7px;
+  }
+
+  .location__whatsapp-arrow {
+    font-size: 19px;
+  }
+}.location__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}/* =========================================================
+   CARRUSEL — URAJÁN DE LUNA
+   ========================================================= */
+
+.location__carousel {
+  position: relative;
+
+  width: 100%;
+  margin-top: 28px;
+
+  overflow: hidden;
+  background: var(--color-film-black);
+}
+
+.location__carousel-track {
+  display: flex;
+
+  width: 100%;
+
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.location__carousel-slide {
+  position: relative;
+
+  min-width: 100%;
+  aspect-ratio: 16 / 8;
+
+  overflow: hidden;
+}
+
+.location__carousel-slide::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(20, 20, 20, 0.35)
+    );
+
+  pointer-events: none;
+}
+
+.location__carousel-slide img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 700ms ease;
+}
+
+.location__carousel-slide:hover img {
+  transform: scale(1.03);
+}
+
+
+/* BOTONES */
+
+.location__carousel-button {
+  position: absolute;
+
+  top: 50%;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(245, 241, 234, 0.6);
+
+  background: rgba(20, 20, 20, 0.55);
+
+  color: var(--color-paper);
+
+  cursor: pointer;
+
+  z-index: 3;
+
+  transition:
+    background 200ms ease,
+    border-color 200ms ease;
+}
+
+.location__carousel-button:hover {
+  background: var(--color-copper);
+  border-color: var(--color-copper);
+}
+
+.location__carousel-button i {
+  font-size: 17px;
+}
+
+.location__carousel-button--prev {
+  left: 12px;
+}
+
+.location__carousel-button--next {
+  right: 12px;
+}
+
+
+/* CONTADOR */
+
+.location__carousel-counter {
+  position: absolute;
+
+  right: 14px;
+  bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px 8px;
+
+  background: rgba(20, 20, 20, 0.6);
+
+  color: var(--color-paper);
+
+  font-family: var(--font-body);
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+
+  z-index: 3;
+}
+
+.location__carousel-current {
+  color: var(--color-sand);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .location__carousel {
+    margin-top: 22px;
+  }
+
+  .location__carousel-slide {
+    aspect-ratio: 4 / 3;
+  }
+
+  .location__carousel-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .location__carousel-button--prev {
+    left: 8px;
+  }
+
+  .location__carousel-button--next {
+    right: 8px;
   }
 
 }

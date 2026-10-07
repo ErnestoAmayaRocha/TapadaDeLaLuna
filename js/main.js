@@ -154,4 +154,58 @@ document.querySelectorAll(".memory-card__video").forEach((video) => {
   video.addEventListener("ended", () => {
     button.innerHTML = '<i class="ph ph-play"></i>';
   });
-});
+});/* =========================================================
+   CARRUSEL — UBICACIÓN
+   ========================================================= */
+
+const locationCarousel = document.querySelector(".location__carousel");
+
+if (locationCarousel) {
+  const track = locationCarousel.querySelector(
+    ".location__carousel-track"
+  );
+
+  const slides = locationCarousel.querySelectorAll(
+    ".location__carousel-slide"
+  );
+
+  const prevButton = locationCarousel.querySelector(
+    ".location__carousel-button--prev"
+  );
+
+  const nextButton = locationCarousel.querySelector(
+    ".location__carousel-button--next"
+  );
+
+  const currentCounter = locationCarousel.querySelector(
+    ".location__carousel-current"
+  );
+
+  let currentSlide = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    currentCounter.textContent = String(currentSlide + 1).padStart(2, "0");
+  }
+
+  nextButton.addEventListener("click", () => {
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+
+    updateCarousel();
+  });
+
+  prevButton.addEventListener("click", () => {
+    currentSlide--;
+
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+
+    updateCarousel();
+  });
+}

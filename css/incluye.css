@@ -5,7 +5,11 @@
 .includes {
   width: 100%;
   padding: 85px 24px;
-  background: #cdb99e;
+  background:
+   
+    url("../assets/img/Kit_Canva_La_Tapada_2026/agosto/fondo1.png")
+    center center / cover
+    no-repeat;
   color: #29271f;
 }
 

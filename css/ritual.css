@@ -346,7 +346,7 @@
 
   .ritual__title {
     margin-bottom: 26px;
-    font-size: clamp(52px, 17vw, 76px);
+    font-size: clamp(52px, 16vw, 76px);
     line-height: 0.9;
   }
 
