@@ -646,7 +646,7 @@
     padding: 18px 0 0;
 
     border-left: none;
-    border-top: 1px solid rgba(245, 241, 234, 0.2);
+    
   }
 
   .intro-thin__icon {
@@ -654,11 +654,11 @@
   }
 
   .intro-thin__icon i {
-    font-size: 18px;
+    font-size: 48px;
   }
 
   .intro-thin__icon span {
-    font-size: 7px;
+    font-size: 4px;
   }
 
 
@@ -718,13 +718,18 @@
   .intro-thin__icons {
     gap: 16px 8px;
   }
-
+  
+.intro-thin__icon span {
+  font-size: 16px !important;
+  font-weight: 500;
+}
   .intro-thin__icon {
     gap: 5px;
+    font-size: 15px;
   }
 
   .intro-thin__icon i {
-    font-size: 16px;
+    font-size: 46px;
   }
 
   .intro-thin__icon span {
@@ -733,6 +738,69 @@
 
   .intro-thin__coordinates {
     left: 20px;
+  }
+
+}/* =========================================================
+   INTRO THIN — AJUSTE DESKTOP
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+  .intro-thin__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* Número / edición */
+  .intro-thin__section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Mensaje central */
+  .intro-thin__message {
+    text-align: center;
+  }
+
+  .intro-thin__message h2 {
+    margin: 0;
+  }
+
+  /* ICONOS */
+  .intro-thin__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .intro-thin__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }
+
+  .intro-thin__icon i.ph {
+    font-size: 32px !important;
+    line-height: 1 !important;
+  }
+
+  .intro-thin__icon span {
+    font-size: 13px !important;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  /* Firma */
+  .intro-thin__signature {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
 }
